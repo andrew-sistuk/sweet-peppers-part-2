@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#list where you can save you url pull requests
+pullrequests-list.txt
