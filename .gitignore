@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-#list where you can save you url pull requests
+#file where you can save you url pull requests list
 pullrequests-list.txt
