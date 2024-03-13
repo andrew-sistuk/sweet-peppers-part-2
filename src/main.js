@@ -1,5 +1,6 @@
 import './js/scroll.js';
 import './js/modal.js';
+import './js/portfolio.js'
 
 import './js/header.js';
 import './js/hero.js';
