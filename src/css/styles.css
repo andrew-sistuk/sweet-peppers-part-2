@@ -10,16 +10,34 @@
 @import url('./modal.css');
 @import url('./header.css');
  
- 	
+
+@font-face {
+  font-family: 'InterTight-Medium';
+  src: url('../fonts/InterTight-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterTight-SemiBold';
+  src: url('../fonts/InterTight-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* Ім'я "semi bold" може змінюватися в залежності від шрифту */
+  font-style: normal;
+}
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: InterTight-Medium, InterTight-SemiBold, sans-serif;
+  font-weight: 500;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  --main-red: #ED3B44;
+  --main-white: #FAFAFA;
+  --backround-black: #1C1D20;
+  --cards-black:  #242527;
+  --arrow-gray: #3B3B3B;
+
+  color: var(--main-white);
+  background-color: var(--backround-black);
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -68,3 +86,4 @@
     width: 1280px;
   }
 }
+
