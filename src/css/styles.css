@@ -21,7 +21,7 @@
 @font-face {
   font-family: 'InterTight-SemiBold';
   src: url('../fonts/InterTight-SemiBold.ttf') format('truetype');
-  font-weight: 600; /* Ім'я "semi bold" може змінюватися в залежності від шрифту */
+  font-weight: 600;
   font-style: normal;
 }
 
