@@ -7,3 +7,5 @@ pullrequests-list.txt
 <svg style="stroke:aliceblue;fill:transparent">
    <use href="../img/sprite.svg#icon-arrow-narrow-left"></use>
 </svg>
+
+3) projects in /img/prjs directory
