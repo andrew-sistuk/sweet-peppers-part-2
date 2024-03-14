@@ -1,0 +1,36 @@
+.faq-section {
+padding-top: 32px;
+padding-bottom: 32px;
+
+}
+
+/* Шрифт: Inter Tight
+Вес шрифта: 600
+Размер шрифта: 16pxpx
+Высота строки: 24px
+Межбуквенное расстояние: -2%
+Выровнять: Выровнять по левой */
+.accord-header {
+    margin-bottom: 32px;
+}
+
+.ac-trigger .ac-text-btn {
+width: 265px;
+
+}
+.accordion-container .ac .ac-trigger {
+ padding: 20px 73px 20px 0px;
+
+}
+.accordion-container .ac {
+    margin-top: 0;
+}
+.accordion-container .ac .ac-panel .ac-text {
+    position: relative;
+    padding: 0;
+    /* top: -8px; */
+    padding-bottom: 20px;
+}
+.accordion-container .ac .ac-trigger.trigger-js {
+    padding: 20px 73px 16px 0px;
+}
