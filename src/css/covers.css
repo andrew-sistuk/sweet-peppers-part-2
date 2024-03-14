@@ -1,0 +1,228 @@
+.covers {
+    padding-bottom: 32px;
+    padding-top: 32px;
+    background-color: #1C1D20;
+
+}
+
+.content {
+    position: relative;
+    height: 508px;
+}
+
+.marquee {
+
+    background-image: url(../img/photos/Rectangle.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 508px;
+    border-radius: 30px;
+
+
+}
+
+
+.marquee__line {
+    align-items: center;
+    justify-content: center;
+    width: 282.29px;
+
+    overflow: hidden;
+    transition: transform 250ms linear;
+    white-space: nowrap;
+}
+
+.display-adapt {
+    display: none;
+}
+
+.marquee__line:hover {
+    transform: scale(1.03);
+}
+
+/* /////////////////////////////////////////// */
+.animations-mobile-tablet {
+    animation-name: marqueeLine;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    white-space: nowrap;
+    animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+.absolute {
+    position: absolute;
+    top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.one-line {
+    margin-left: 274px;
+}
+
+.two-line {
+    position: relative;
+    top: -67px;
+    left: -125px;
+}
+
+.three-line {
+    position: relative;
+    top: -16px;
+    left: 29px;
+}
+
+.four-line {
+    position: relative;
+    top: -120px;
+    left: -382px;
+}
+
+
+
+.gallery-items {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.test-div {
+    position: relative;
+    top: -122px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    transform: rotate(16deg);
+}
+
+.test-div-two {
+    display: flex;
+    gap: 12px;
+}
+
+.relet {
+    position: relative;
+    left: -159px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 375px) {
+    .content {
+        width: 375px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .content {
+        width: 768px;
+        height: 960px;
+    }
+
+    .marquee {
+        height: 960px;
+    }
+
+    .marquee__line {
+        width: 544px;
+    }
+
+    .test-div {
+        gap: 25px;
+        top: -239px;
+    }
+
+    .test-div-two {
+        gap: 25px;
+    }
+
+    .relet {
+        left: -271px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .content {
+        width: 1440px;
+        height: 960px;
+    }
+
+    .marquee {
+        height: 960px;
+    }
+
+
+    .test-div {
+        gap: 40px;
+        top: -146px;
+    }
+
+    .test-div-two {
+        gap: 40px;
+    }
+
+    .relet {
+        left: -289px;
+    }
+
+    .display-adapt {
+        display: block;
+    }
+
+    .animations {
+        transition: transform 2500ms linear;
+    }
+
+    .animations:hover {
+        transform: translateX(-20%);
+    }
+
+    .animations {
+        transition: transform 2s linear;
+    }
+
+    .animations:hover {
+        transform: translateX(-25%);
+    }
+}

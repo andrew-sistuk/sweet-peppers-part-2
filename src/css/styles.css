@@ -5,11 +5,11 @@
 /* @import url('./benefits.css'); */
 /* @import url('./projects.css'); */
 /* @import url('./faq.css'); */
-/* @import url('./covers.css'); */
+@import url('./covers.css');
 /* @import url('./footer.css'); */
 /* @import url('./modal.css'); */
 /* @import url('./header.css');  */
- 
+
 
 @font-face {
   font-family: 'InterTight-Medium';
@@ -32,7 +32,7 @@
   --main-red: #ED3B44;
   --main-white: #FAFAFA;
   --backround-black: #1C1D20;
-  --cards-black:  #242527;
+  --cards-black: #242527;
   --arrow-gray: #3B3B3B;
 
   color: var(--main-white);
@@ -86,4 +86,3 @@
     width: 1440px;
   }
 }
-
