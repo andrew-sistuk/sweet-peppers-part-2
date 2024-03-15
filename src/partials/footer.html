@@ -2,7 +2,11 @@
             <div class="container">
               <section class="work">
               <h2 class="work-title">
-                <img class="form-logo" src="../img/logo.webp" alt="jeferson photo" />
+                <picture class="form-logo">
+                  <source srcset="../img/main-logo.webp, ../img/main-logo@2x.webp 2x" media="(min-width: 768px)" width="77" height="77" />
+                  <source srcset="../img/logo.webp, ../img/logo@2x.webp 2x" alt="MDN" width="44" height="44"/>
+                  <img src="../img/logo.webp" alt="MDN" width="44" height="44"/>
+                </picture>
                 Let’s <span class="work-title-orange">work</span> together
               </h2>
       
@@ -23,7 +27,8 @@
               </address>
             </section>
             </div>
-          <div class="backdrop is-hidden">
+
+          <div class="backdrop succes is-hidden">
             <div class="modal">
               <button class="modal-close-btn" type="button">
                 <svg class="close-icon" width="22" height="22">
@@ -32,6 +37,18 @@
               </button>
               <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
               <p class="modal-text">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+            </div>
+          </div>
+
+          <div class="backdrop error is-hidden">
+            <div class="modal">
+              <button class="modal-close-btn" type="button">
+                <svg class="close-icon" width="22" height="22">
+                  <use href="./img/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+              <h3 class="modal-title">Error</h3>
+              <p class="modal-text-error">We have a problems, you enter invalid email</p>
             </div>
           </div>
 </footer>

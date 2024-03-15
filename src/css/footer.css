@@ -2,20 +2,17 @@
 
 .work{
     color: #FAFAFA;
-    padding: 32px 0px;
+    padding: 48px 0px;
+    background-image: url('../img/footer-background.png');
+    background-size: 450px 551px;
+    background-position: 290px bottom ;
+    background-repeat: no-repeat;
   }
   
   .form-logo{
     display: inline-block;
-    width: 44px;
-    height: 44px;
-  }
-  
-  .container{
-    width: 375px;
-    padding: 32px 16px;
-    margin-left: auto;
-    margin-right: auto;
+    vertical-align: text-top;
+    margin-bottom: 4px;
   }
   
   
@@ -192,6 +189,7 @@
     border: none;
     display: block;
     padding: 0;
+    z-index: 999;
   }
 
   .close-icon{
@@ -229,6 +227,12 @@
         line-height: 100%;
     }
 
+    .form-logo{
+      width: 77px;
+      height: 77px;
+      margin-bottom: 7px;
+    }
+
     .work-form{
         flex-direction: row;
         align-items: center;
@@ -241,8 +245,8 @@
     }
 
     .work-send-btn{
-      width: 150px;
-      height: 150px;
+      min-width: 150px;
+      min-height: 150px;
     }
 
     .contact-link{
@@ -271,12 +275,21 @@
       width: 24px;
       height: 24px;
     }
+    .work{
+      padding-top: 86px;
+      background-size: 400px 636px;
+      background-position: 510px bottom ;
+    }
   }
 
   @media screen and (min-width: 1440px) {
 
   .work{
-    padding: 0 164px;
+    padding: 122px 164px 169px ;
+    background-image: url('../img/footer-backgraund-desktop.png');
+    background-size: 400px 700px;
+    background-position: 1000px bottom ;
+
   }
 
   .work-form{
