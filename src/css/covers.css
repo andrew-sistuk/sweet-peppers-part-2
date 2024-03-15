@@ -1,6 +1,7 @@
 .covers .container {
   padding-left: 0;
   padding-right: 0;
+  max-width: 100%;
 }
 
 .covers {
@@ -26,7 +27,6 @@
   margin-right: auto;
   width: 100%;
   height: 508px;
-  border-radius: 30px;
 }
 
 .marquee__line {
@@ -141,16 +141,25 @@
 
 @media only screen and (min-width: 375px) {
   .content {
-    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
+@media only screen and (min-width: 525px) {
+  .display-adapt {
+    display: block;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .content {
-    width: 768px;
+    /* width: 768px; */
     height: 960px;
+  }
+
+  .covers .container {
+    width: 100%;
   }
 
   .marquee {
@@ -181,8 +190,13 @@
     height: 960px;
   }
 
+  .display-adapt {
+    display: block;
+  }
+
   .marquee {
     height: 960px;
+    border-radius: 30px;
   }
 
   .test-div {
@@ -196,10 +210,6 @@
 
   .relet {
     left: -289px;
-  }
-
-  .display-adapt {
-    display: block;
   }
 
   .animations {

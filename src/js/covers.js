@@ -3,13 +3,11 @@ const covers = document.querySelector('.content');
 
 function checkIfCoversInView() {
   const bounding = covers.getBoundingClientRect();
+
   const coversInView =
     bounding.top >= 0 &&
-    bounding.left >= 0 &&
     bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth);
+      (window.innerHeight || document.documentElement.clientHeight);
 
   if (coversInView) {
     if (window.innerWidth < 1440) {
