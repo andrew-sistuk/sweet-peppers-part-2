@@ -20,9 +20,6 @@
 }
 
 .benefits-item-container {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
   background-color: var(--cards-black);
   border-radius: 20px;
   padding: 24px;
@@ -32,16 +29,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 64px;
   width: 48px;
   height: 48px;
   border-radius: 10px;
   background-color: var(--main-red);
 }
 
-.user-icon,
-.message-chat-icon,
-.brush-icon,
-.hourglass-icon {
+.benefits-icons {
   stroke: var(--main-white);
   fill: transparent;
 }
@@ -60,7 +55,6 @@
 }
 
 .benefits-description {
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -68,9 +62,10 @@
 }
 
 .benefits-btn {
-  display: inline-flex;
-  padding: 18px 36px;
-  font-weight: 500;
+  display: block;
+  width: 187px;
+  height: 55px;
+  padding: 17px 35px;
   font-size: 16px;
   letter-spacing: -0.02em;
   border: 1px solid rgba(250, 250, 250, 0.2);
