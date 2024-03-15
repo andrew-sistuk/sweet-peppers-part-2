@@ -1,11 +1,21 @@
-<section class="about-me-container">
-    <div class="container">
-        <section>
-            <div class="about-firsd-section-text-container"><p>I work with people all over the world to create impressive and <span class="about-firsd-section-text-sekond-color">functional</span> <span class="about-firsd-section-text-third-color">websites</span> that reflect each client's unique personality.</p></div>
-            <img class="about-first-section-image" src="" alt="">
-        </section>
+<section class="container" id="about-me">
+    <div class="about-me-container">
+        <div class="about-me-first-section-container">
+            <div class="about-first-section-text-container"><p class="about-first-section-text">I work with people all over the world to create impressive and <span class="about-first-section-text-sekond-color">functional</span> <span class="about-first-section-text-third-color">websites</span> that reflect each client's unique personality.</p></div>
+            <img class="about-first-section-image" srcset="
+            ./img/desktop/image.webp      680w,
+            ./img/desktop/image@2x.webp   1360w,
+            ./img/tablet/image.webp       704w,
+            ./img/tablet/image@2x.webp    1408w,
+            ./img/image.webp             343w,
+            ./img/image@2x.webp              686w
+          "
+          sizes="(min-width: 1440px) 680px, (min-width: 768px) 704px, (max-width: 767px) 343px"
+          src="./img/image.webp"
+          alt="men with laptop">
+        </div>
 
-        <section>
+        <div>
             <div>
                 <div class="about-accordeon-btn">
                     <h2></h2>
@@ -33,9 +43,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section>
+        <div>
             <ul>
                 <li>HTML/CSS</li>
                 <li>JavaScript</li>
@@ -44,7 +54,7 @@
                 <li>React Native</li>
                 <li>Soft skills</li>
             </ul>
-        </section>
+        </div>
 
 
 
