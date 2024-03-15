@@ -10,15 +10,31 @@
 }
 
 @media screen and (min-width: 768px) {
+  .about-me-container {
+    width: 704px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+    .about-me-container {
+        width: 1376px;
+      }
 }
 
 .about-me-first-section-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .about-me-first-section-container {
+
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-me-first-section-container {
+    flex-direction: row;
+  }
 }
 
 .about-first-section-text-container {
@@ -28,6 +44,19 @@
   width: 343px;
   height: 500px;
   padding: 32px 30px;
+  
+}
+@media screen and (min-width: 768px) {
+  .about-first-section-text-container {
+    width: 704px;
+    height: 700px;
+    padding: 64px 64px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-first-section-text-container {
+    width: 680px;
+      }
 }
 
 .about-first-section-text {
@@ -40,6 +69,19 @@
   text-transform: uppercase;
   width: 283px;
   height: 196px;
+}
+@media screen and (min-width: 768px) {
+  .about-first-section-text {
+    font-size: 38px;
+    width: 576px;
+    height: 200px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-first-section-text {
+    width: 552px;
+  }
 }
 
 .about-first-section-text-sekond-color {
