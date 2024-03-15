@@ -1,9 +1,26 @@
-//  Перелік проєктів та опису до них необхідно реалізувати за допомогою <ul> у вигляді горизонтального слайдера (https://swiperjs.com/swiper-api). 
-      
-//  Користувач повинен мати змогу взаємодіяти зі слайдером через мишу, клавіатуру (клавіш Tab та стрілок) або сенсорний екран. 
-                  
-//  У разі досягнення кінця списку елементів, кнопка відповідно до вказаного напрямку повинна бути задізейблена (користувач більше не може взаємодіяти з нею, і вона не реагує на події clickу або натискання клавіші). 
-                  
-//  Задізейблена кнопка візуальною змінюється, що підкреслює її неактивний стан. 
-              
-//  Посилання "See project" має відкривати проєкт команди, розміщений на GitHub, у новій вкладці. 
+import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+
+new Swiper('.swiper', {
+  modules: [Navigation, Keyboard, Mousewheel],
+  speed: 800,
+  grabCursor: true,
+  allowTouchMove: true,
+  direction: 'horizontal',
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  mousewheel: {
+    sensitivity: 1,
+    eventsTarget: '.swiper-wrapper',
+  },
+});
