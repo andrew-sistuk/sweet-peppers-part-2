@@ -1,0 +1,298 @@
+
+
+.work{
+    color: #FAFAFA;
+    padding: 32px 0px;
+  }
+  
+  .form-logo{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .container{
+    width: 375px;
+    padding: 32px 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .work-title{
+    font-family: InterTight-Medium;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+    color: var(--main-white);
+  }
+  .work-title-orange{
+    color: #ED3B44;
+  }
+  
+  .work-form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+  
+  .work-form-input{
+    border: none;
+    width: 343px;
+    height: 44px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    color: rgba(250, 250, 250);
+    align-content: center;
+    padding-bottom: 20px;
+  }
+
+  .work-form-input.succes{
+    border-bottom: 1px solid #3CBC81;
+  }
+
+  .work-form-input.invalid{
+    border-bottom: 1px solid #E74A3B;
+  }
+
+  .succes-text{
+    color: #3CBC81;
+    font-family: InterTight-Medium;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+  }
+
+  .invalid-text{
+    color: #E74A3B;
+    font-family: InterTight-Medium;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+  }
+
+  .email-input-wrapper{
+    padding: 0;
+    position: relative;
+  }
+
+  .work-form-input::placeholder{
+    color: rgba(250, 250, 250, 0.6);
+    font-family: 'InterTight-Medium';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+  }
+  
+  .work-form-input:hover, .work-form-input:active{
+    border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+    color: rgba(250, 250, 250);
+  }
+  
+  input:focus {
+    outline: none;
+   }
+  
+  .work-send-btn{
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ED3B44;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #FAFAFA;
+    line-height: 0px;
+    display: block;
+  }
+  
+  .work-send-btn:hover, .work-send-btn:active{
+    background-color: #E0373F;
+  }
+  
+  .work-contacts{
+    display: flex;
+    gap: 4px;
+    border-left: 1px solid #FFFFFF;
+    padding-left: 4px;
+    /* треба зробити звичайний */
+    font-family: InterTight-SemiBold; 
+  }
+  
+  .contact-link{
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    
+  }
+  
+  .contact-link:hover, .contact-link:active{
+    border: 1px solid rgba(250, 250, 250);
+  }
+  
+  .modal{
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 20px;
+    padding: 64px 32px;
+    width: 343px;
+    height: 276px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--backround-black);
+  }
+  .modal-title{
+    color: #FAFAFA;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+  }
+  
+  .modal-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(250, 250, 250, 0.6);
+  }
+  
+  .modal-close-btn{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding: 0;
+  }
+
+  .close-icon{
+    stroke: #FAFAFA;
+  }
+  
+  .backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+  }
+  
+  .is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 768px) {
+    .work-title{
+        width: 542px;
+        font-family: InterTight-Medium;
+        font-size: 64px;
+        line-height: 100%;
+    }
+
+    .work-form{
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 78px;
+    }
+
+    .work-form-input{
+        width: 245px;
+        height: 44px;
+    }
+
+    .work-send-btn{
+      width: 150px;
+      height: 150px;
+    }
+
+    .contact-link{
+      border: 1px solid rgba(250, 250, 250, 0.2);
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      line-height: none;
+      border-radius: 60px;
+      padding: 18px 32px;
+    }
+
+    .work-contacts{
+      border: none;
+      gap: 8px;
+      padding: 0;
+    }
+
+    .modal{
+      padding: 64px;
+      width: 492px;
+      height: 246px;
+    }
+    .close-icon{
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+
+  .work{
+    padding: 0 164px;
+  }
+
+  .work-form{
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 78px;
+  }
+
+  .work-form-input{
+      width: 390px;
+      height: 44px;
+  }
+
+  .work-send-btn{
+    width: 150px;
+    height: 150px;
+    margin-left: 86px;
+  }
+  }
