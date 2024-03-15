@@ -62,7 +62,7 @@
 }
 
 .benefits-btn {
-  display: block;
+  display: inline-block;
   min-width: 187px;
   height: 55px;
   padding: 17px 35px;
