@@ -18,7 +18,7 @@ comment.value = localStorage.getItem('comment');
 
 
 
-emailInput.addEventListener("input", event =>{
+emailInput.addEventListener("blur", event =>{
 
     localStorage.setItem('email', emailInput.value.trim());
 

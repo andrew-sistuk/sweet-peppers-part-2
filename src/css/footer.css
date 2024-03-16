@@ -46,6 +46,9 @@
     color: rgba(250, 250, 250);
     align-content: center;
     padding-bottom: 20px;
+    white-space: nowrap;  
+    overflow: hidden; 
+    text-overflow: ellipsis;
   }
 
   .work-form-input.succes{
