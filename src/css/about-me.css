@@ -1,4 +1,4 @@
-
+@import 'swiper/css';
 @import 'accordion-js/dist/accordion.min.css';
 
 @media screen and (min-width: 375px) {
@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 64px;
+    min-width: 0;
     width: 343px;
     margin-left: auto;
     margin-right: auto;
@@ -111,7 +112,7 @@
 
 /* Друга частина about me (акардеон) */
 
-.accardeon {
+.accordeon {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -119,12 +120,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .accardeon {
+  .accordeon {
     padding-top: 64px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .accardeon {
+  .accordeon {
     padding-top: 96px;
   }
 }
@@ -189,13 +190,29 @@
 .about-me-slider {
   padding-top: 32px;
   display: flex;
-  gap: 55;
+  gap: 55px;
+  width: 343px;
 }
+@media screen and (min-width: 768px) {
+  .about-me-slider {
+    gap: 64px;
+    width: 704px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-me-slider {
+    gap: 72px;
+    width: 1312px;
+  }
+}
+
+
 
 @media screen and (min-width: 768px) {
   .about-me-slider {
     padding-top: 64px;
     gap: 64;
+    width: 200xp;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -205,11 +222,24 @@
   }
 }
 
-.about-me-slider-container{
-display: flex;
+.about-me-slider-container {
+  display: flex;
+  width: 260px;
+  /* overflow: hidden; */
+}
+@media screen and (min-width: 768px) {
+  .about-me-slider-container {
+    width: 400xpx;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-me-slider-container {
+    width: 1200px;
+  }
 }
 
-.about-me-slider-item {
+.about-me-slider-item,
+.swiper-slide {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -226,9 +256,25 @@ display: flex;
   /* background-color: var(--main-red); */
 }
 @media screen and (min-width: 768px) {
-  .about-me-slider-item {
+  .about-me-slider-item,
+  .swiper-slide {
     width: 200px;
     height: 200px;
     font-size: 20px;
+  }
+}
+
+
+.about-me-slider-button{
+  width: 28px;
+}
+@media screen and (min-width: 768px) {
+  .about-me-slider-button{
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-me-slider-button{
+    width: 40px;
   }
 }

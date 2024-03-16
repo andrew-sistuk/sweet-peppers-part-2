@@ -2,7 +2,12 @@
     <h1 style="display: none;">About Me</h1>
     <div class="about-me-container">
         <div class="about-me-first-section-container">
-            <div class="about-first-section-text-container"><p class="about-first-section-text">I work with people all over the world to create impressive and <span class="about-first-section-text-sekond-color">functional</span> <span class="about-first-section-text-third-color">websites</span> that reflect each client's unique personality.</p></div>
+            <div class="about-first-section-text-container">
+                <p class="about-first-section-text">I work with people all over the world to create impressive and <span
+                        class="about-first-section-text-sekond-color">functional</span> <span
+                        class="about-first-section-text-third-color">websites</span> that reflect each client's unique
+                    personality.</p>
+            </div>
             <img class="about-first-section-image" srcset="
             ./img/desktop/image.webp      680w,
             ./img/desktop/image@2x.webp   1360w,
@@ -10,30 +15,39 @@
             ./img/tablet/image@2x.webp    1408w,
             ./img/image.webp              343w,
             ./img/image@2x.webp           686w
-          "
-          sizes="(min-width: 1440px) 680px, (min-width: 768px) 704px, (max-width: 767px) 343px"
-          src="./img/image.webp"
-          alt="men with laptop">
+          " sizes="(min-width: 1440px) 680px, (min-width: 768px) 704px, (max-width: 767px) 343px"
+                src="./img/image.webp" alt="men with laptop">
         </div>
 
-        <div class="accordion-container">
+        <div class="accordeon">
             <div class="accardeon-item">
                 <div class="about-accordeon-btn">
-                    <div class="ac-trigger">
-                    <h2 class="accardeon-heading">About me</h2>
-                    <img src="" alt="">
-                </div>
-                    <div class="about-accordeon-text-container about-accordeon-text-container-first">
-                        <p class="accardeon-text">I am Lloyd Jefferson, a talented programmer with extensive expertise in software development. I have an understanding of different programming languages ​​and technologies, always ready to improve my skills. I always follow the latest trends and look for unconventional, creative solutions to problems. I have a high level of analytical skills and am able to effectively solve even the most difficult tasks encountered on the way.</p>
-                        <p class="accardeon-text">Able to work both independently and in a team. I can effectively cooperate with colleagues, exchanging ideas and finding optimal solutions. Professional maturity allows you to calmly cope with challenges and stressful situations, while maintaining a high quality of work. I am always looking for opportunities for self-improvement. I actively study new technologies and practices to stay abreast of the latest innovations. I have a strong understanding of various programming languages, frameworks and architectural concepts that allow me to create efficient and scalable software.</p>
+                    <div class="accardeon-trigger">
+                        <h2 class="accardeon-heading">About me</h2>
+                        <img src="" alt="">
+                    </div>
+                    <div class="is-active about-accordeon-text-container about-accordeon-text-container-first">
+                        <p class="accardeon-text">I am Lloyd Jefferson, a talented programmer with extensive expertise
+                            in software development. I have an understanding of different programming languages ​​and
+                            technologies, always ready to improve my skills. I always follow the latest trends and look
+                            for unconventional, creative solutions to problems. I have a high level of analytical skills
+                            and am able to effectively solve even the most difficult tasks encountered on the way.</p>
+                        <p class="accardeon-text">Able to work both independently and in a team. I can effectively
+                            cooperate with colleagues, exchanging ideas and finding optimal solutions. Professional
+                            maturity allows you to calmly cope with challenges and stressful situations, while
+                            maintaining a high quality of work. I am always looking for opportunities for
+                            self-improvement. I actively study new technologies and practices to stay abreast of the
+                            latest innovations. I have a strong understanding of various programming languages,
+                            frameworks and architectural concepts that allow me to create efficient and scalable
+                            software.</p>
                     </div>
                 </div>
             </div>
             <div class="accardeon-item">
                 <div class="about-accordeon-btn">
-                    <div class="ac-trigger">
-                    <h2 class="accardeon-heading ac-header">ROLE</h2>
-                    <img src="" alt="">
+                    <div class="accardeon-trigger">
+                        <h2 class="accardeon-heading ac-header">ROLE</h2>
+                        <img src="" alt="">
                     </div>
                     <div class="about-accordeon-text-container about-accordeon-text-container-second">
                         <p class="accardeon-text">Frontend development</p>
@@ -44,27 +58,29 @@
             </div>
             <div class="accardeon-item">
                 <div class="about-accordeon-btn">
-                    <div class="ac-trigger">
-                    <h2 class="accardeon-heading">EDUCATION</h2>
-                    <img src="" alt="">
-                </div>
+                    <div class="accardeon-trigger">
+                        <h2 class="accardeon-heading">EDUCATION</h2>
+                        <img src="" alt="">
+                    </div>
                     <div class="about-accordeon-text-container about-accordeon-text-container-third">
-                        <p class="accardeon-text">2018 - 2019  / Frontend Development Diploma, GoIT IT School, New York</p>
-                        <p class="accardeon-text">2019 - 2020 / Advanced Web Development Certificate, GoIT IT School, New York</p>
+                        <p class="accardeon-text">2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+                        </p>
+                        <p class="accardeon-text">2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+                            New York</p>
                         <p class="accardeon-text">2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="about-me-slider">
-            <ul class="about-me-slider-container">
-                <li class="about-me-slider-item">HTML/CSS</li>
-                <li class="about-me-slider-item">JavaScript</li>
-                <!-- <li class="about-me-slider-item">React</li>
-                <li class="about-me-slider-item">Node. js</li>
-                <li class="about-me-slider-item">React Native</li>
-                <li class="about-me-slider-item">Soft skills</li> -->
+        <div class="about-me-slider swiper-container">
+            <ul class="about-me-slider-container swiper-wrapper">
+                <li class="about-me-slider-item swiper-slide">HTML/CSS</li>
+                <li class="about-me-slider-item swiper-slide">JavaScript</li>
+                <li class="about-me-slider-item swiper-slide">React</li>
+                <li class="about-me-slider-item swiper-slide">Node. js</li>
+                <li class="about-me-slider-item swiper-slide">React Native</li>
+                <li class="about-me-slider-item swiper-slide">Soft skills</li>
             </ul>
             <div class="about-me-slider-button">btn</div>
         </div>
