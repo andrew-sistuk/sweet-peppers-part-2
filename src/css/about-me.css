@@ -16,9 +16,9 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .about-me-container {
-        width: 1376px;
-      }
+  .about-me-container {
+    width: 1376px;
+  }
 }
 
 .about-me-first-section-container {
@@ -28,7 +28,6 @@
 }
 @media screen and (min-width: 768px) {
   .about-me-first-section-container {
-
   }
 }
 @media screen and (min-width: 1440px) {
@@ -44,7 +43,6 @@
   width: 343px;
   height: 500px;
   padding: 32px 30px;
-  
 }
 @media screen and (min-width: 768px) {
   .about-first-section-text-container {
@@ -56,7 +54,7 @@
 @media screen and (min-width: 1440px) {
   .about-first-section-text-container {
     width: 680px;
-      }
+  }
 }
 
 .about-first-section-text {
@@ -105,5 +103,129 @@
   .about-first-section-image {
     width: 680px;
     height: 700px;
+  }
+}
+
+/* Друга частина about me (акардеон) */
+
+.accardeon {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .accardeon {
+    padding-top: 64px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .accardeon {
+    padding-top: 96px;
+  }
+}
+
+.accardeon-item {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  padding-bottom: 32px;
+}
+
+.accardeon-heading {
+  font-family: 'InterTight-Medium', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 24px;
+}
+
+.about-accordeon-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.about-accordeon-text-container-first {
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .about-accordeon-text-container-first {
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-accordeon-text-container-first {
+    gap: 32px;
+  }
+}
+.about-accordeon-text-container-second {
+  gap: 10px;
+}
+.about-accordeon-text-container-third {
+  gap: 10px;
+}
+
+.accardeon-text {
+  font-family: 'InterTight-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  text-align: left;
+}
+@media screen and (min-width: 1440px) {
+  .accardeon-text {
+    padding-left: 688px;
+  }
+}
+
+/* третя частина about-me sliser */
+
+.about-me-slider {
+  padding-top: 32px;
+  display: flex;
+  gap: 55;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-slider {
+    padding-top: 64px;
+    gap: 64;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-me-slider {
+    padding-top: 96px;
+    gap: 72;
+  }
+}
+
+.about-me-slider-container{
+display: flex;
+}
+
+.about-me-slider-item {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'InterTight-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -2%;
+  text-align: left;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  /* background-color: var(--main-red); */
+}
+@media screen and (min-width: 768px) {
+  .about-me-slider-item {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
   }
 }
