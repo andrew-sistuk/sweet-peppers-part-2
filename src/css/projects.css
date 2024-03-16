@@ -54,8 +54,8 @@
 }
 
 .project-link-btn {
-  display: block;
-  width: 144px;
+  display: inline-block;
+  min-width: 144px;
   text-align: center;
   border-radius: 60px;
   padding: 16px 32px;
@@ -71,10 +71,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 16px;
+  padding: 110px 16px;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  background: #242527;
+  background: var(--cards-black);
 }
 
 /* NAVIGATION BUTTOMS */
@@ -141,11 +141,6 @@
 
 /* ------NAVIGATION BUTTOMS */
 
-@media screen and (max-width: 768px) {
-  .project-image-wrapper {
-    height: 420px;
-  }
-}
 @media screen and (min-width: 768px) {
   .projects {
     padding-top: 48px;
@@ -171,7 +166,7 @@
   }
 
   .project-image-wrapper {
-    padding: 85px 45px;
+    padding: 80px 45px;
   }
 
   .project-link-btn {
