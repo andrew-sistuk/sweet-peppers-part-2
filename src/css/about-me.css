@@ -1,3 +1,6 @@
+
+@import 'accordion-js/dist/accordion.min.css';
+
 @media screen and (min-width: 375px) {
   .about-me-container {
     display: flex;
@@ -26,10 +29,10 @@
   flex-direction: column;
   gap: 16px;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .about-me-first-section-container {
   }
-}
+} */
 @media screen and (min-width: 1440px) {
   .about-me-first-section-container {
     flex-direction: row;
