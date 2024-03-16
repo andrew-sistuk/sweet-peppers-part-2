@@ -82,8 +82,6 @@ async function sendRequest(event){
 }
 
 
-
-
 function clickOnBackdrop(event){
   if(event.target === modalBackdropSucces){
     modalBackdropSucces.classList.add("is-hidden");

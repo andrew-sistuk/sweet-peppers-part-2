@@ -196,6 +196,10 @@
     stroke: #FAFAFA;
   }
   
+  .backdrop.is-hidden{
+    opacity: 0;
+  }
+
   .backdrop{
     position: fixed;
     width: 100%;
@@ -203,6 +207,8 @@
     background-color: rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
   }
   
   .is-hidden {
@@ -212,7 +218,6 @@
     margin: -1px;
     border: 0;
     padding: 0;
-    
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
