@@ -1,0 +1,214 @@
+.covers .container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+}
+
+.covers {
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+
+.content {
+  position: relative;
+  height: 508px;
+}
+
+.marquee {
+  background-image: url(../img/prjs/Rectangle.webp);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 508px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .marquee {
+    background-image: url(../img/prjs/Rectangle-@2x.webp);
+  }
+}
+
+.marquee__line {
+  width: 282px;
+  overflow: hidden;
+  transition: transform 250ms linear;
+  white-space: nowrap;
+}
+
+.display-adapt {
+  display: none;
+}
+
+.marquee__line:hover {
+  transform: scale(1.03);
+}
+
+.animations-mobile-tablet {
+  animation-name: marqueeLine;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  white-space: nowrap;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.one-line {
+  margin-left: 274px;
+}
+
+.two-line {
+  position: relative;
+  top: -67px;
+  left: -125px;
+}
+
+.three-line {
+  position: relative;
+  top: -16px;
+  left: 29px;
+}
+
+.four-line {
+  position: relative;
+  top: -120px;
+  left: -382px;
+}
+
+.gallery-items {
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-covers {
+  position: relative;
+  top: -122px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  transform: rotate(16deg);
+}
+
+.list-element-covers {
+  display: flex;
+  gap: 12px;
+}
+
+.relet {
+  position: relative;
+  left: -159px;
+}
+
+@media only screen and (min-width: 375px) {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 525px) {
+  .display-adapt {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    height: 960px;
+  }
+
+  .covers .container {
+    width: 100%;
+  }
+
+  .marquee {
+    height: 960px;
+  }
+
+  .marquee__line {
+    width: 544px;
+  }
+
+  .list-covers {
+    gap: 25px;
+    top: -239px;
+  }
+
+  .list-element-covers {
+    gap: 25px;
+  }
+
+  .relet {
+    left: -271px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .content {
+    width: 1440px;
+    height: 960px;
+  }
+
+  .display-adapt {
+    display: block;
+  }
+
+  .display-adapt-end {
+    display: none;
+  }
+
+  .marquee {
+    height: 960px;
+    border-radius: 30px;
+  }
+
+  .list-covers {
+    gap: 40px;
+    top: -146px;
+  }
+
+  .list-element-covers {
+    gap: 40px;
+  }
+
+  .relet {
+    left: -289px;
+  }
+
+  .animations {
+    transition: transform 2500ms linear;
+  }
+
+  .animations:hover {
+    transform: translateX(-20%);
+  }
+
+  .animations {
+    transition: transform 2s linear;
+  }
+
+  .animations:hover {
+    transform: translateX(-25%);
+  }
+}
