@@ -1,0 +1,141 @@
+header {
+  background-color: rgba(255, 255, 255, 0);
+  padding-top: 32px;
+}
+.header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu-container {
+  position: relative;
+}
+
+.header-menu-container,
+.header-order-btn {
+  align-self: flex-start;
+}
+/*стилі тексту*/
+.header-text {
+  font-family: InterTight-Medium sans-serif;
+  color: var(--main-white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -2%;
+}
+/* Логотип */
+
+.header-logo {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.header-logo-img {
+  width: 80px;
+  height: 80px;
+}
+
+.header-logo-text {
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 88px;
+}
+
+/* Меню */
+.header-menu-button {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+
+.header-menu-checkbox {
+  display: none;
+}
+
+.header-menu-list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.header-menu-item {
+  white-space: nowrap;
+}
+.header-menu-checkbox:checked ~ .header-menu-list {
+  display: block;
+}
+.button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  outline: none;
+}
+.header-order-btn {
+  position: static;
+  width: 163px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 24px;
+  border-radius: 60px;
+  background: var(--main-red);
+  border: none;
+  cursor: pointer;
+}
+
+.header-menu-link-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 375px) {
+  .header-container > *:not(.header-logo):not(.header-menu-link-btn) {
+    display: none;
+  }
+  .header-menu-link-btn {
+    display: block;
+  }
+  .header-menu-checkbox:checked ~ .header-menu-list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .header-order-btn {
+    display: none;
+  }
+
+  .header-menu-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-link-btn {
+    display: none;
+  }
+  .header-container > *:not(.header-menu-link-btn) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}

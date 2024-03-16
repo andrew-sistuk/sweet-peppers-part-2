@@ -1,0 +1,60 @@
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 375px;
+  height: 100%;
+  background-image: url(./img/glass-effect.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 9999;
+}
+.modal-container {
+}
+.modal-icon-container {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+}
+
+.header-modal-menu-button {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 31px 14px 31px;
+  padding: 18px 24px;
+  border-radius: 60px;
+  background: var(--main-red);
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .overlay {
+    width: 100%;
+  }
+}
+.header-modal-menu-item {
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+.button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  outline: none;
+}

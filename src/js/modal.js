@@ -1,14 +1,13 @@
-// (() => {
-//   const reft = {
-//     openMenuBtn: document.querySelector('[data-menu-open]'),
-//     closeMenuBtn: document.querySelector('[data-menu-close]'),
-//     menu: document.querySelector('[data-menu]'),
-//   };
-
-//   reft.openMenuBtn.addEventListener('click', toggleModal);
-//   reft.closeMenuBtn.addEventListener('click', toggleModal);
-
-//   function toggleModal() {
-//     reft.menu.classList.toggle('is-open');
-//   }
-// })();
+document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('click', function (event) {
+    const closeButton = event.target.closest('#close-menu');
+    if (closeButton) {
+      const overlay = document.querySelector('.overlay');
+      if (overlay) {
+        overlay.style.display = 'none';
+      } else {
+        console.error('Overlay element not found');
+      }
+    }
+  });
+});

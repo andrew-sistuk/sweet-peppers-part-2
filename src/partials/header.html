@@ -1,5 +1,48 @@
 <header class="header">
-    <div class="container">
-        - Header
+  <div class="header-container container">
+    <div class="header-logo">
+      <a href="#" class="header-logo-link">
+        <img src="./img/logo@2x.webp" alt="man-logo" class="header-logo-img" />
+        <p class="header-logo-text header-text">jefferson*</p>
+      </a>
     </div>
+    <div class="header-menu-container">
+      <input
+        type="checkbox"
+        id="header-menu-checkbox"
+        class="header-menu-checkbox"
+      />
+      <label
+        for="header-menu-checkbox"
+        id="header-menu-button"
+        class="header-menu-button"
+        >Menu</label
+      >
+      <ul id="header-menu-list" class="header-menu-list header-text">
+        <a href="#about-me">
+          <li class="header-menu-item">About me</li>
+        </a>
+        <a href="#benefits">
+          <li class="header-menu-item">Benefits</li>
+        </a>
+        <a href="#projects">
+          <li class="header-menu-item">Projects</li>
+        </a>
+        <a href="#faq">
+        <li class="header-menu-item">FAQ</li>
+      </ul>
+      </a>
+    </div>
+    <button class="header-order-btn header-text" type="button">
+      Order the project
+    </button>
+
+    <div class="header-menu-link-btn">
+      <button class="header-btn button-reset" id="open-menu">
+        <svg class="header-menu-svg" width="28" height="28">
+          <use href="./img/sprite.svg#icon-menu-open"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </header>
