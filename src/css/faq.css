@@ -1,28 +1,6 @@
-/* 
-.accordion-container .ac .ac-trigger.trigger-js {
-  padding: 20px 73px 16px 0px;
+/* .accordion-container .ac .ac-trigger {
+  font: bold -1px 'Inter Tight', sans-serif;
 } */
-
-/* @media screen and (min-width: 768px) {
-    .accord-marg {
-      max-width: 768px;
-    }
-
-  }
-  
-  @media screen and (min-width: 1158px) {
-    .accord-marg {
-      max-width: 1158px;
-  
-      padding-left: 15px;
-  
-      padding-right: 15px;
-    }
-  }
-   */
-.accordion-container .ac .ac-trigger {
-  font: bold -1px'Inter Tight', sans-serif;
-}
 .faq-section {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -31,11 +9,11 @@
 .accord-header {
   margin-bottom: 32px;
   color: rgba(250, 250, 250, 0.4);
-  font: 'Inter Tight', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  /* letter-spacing: -0.04em; */
+  letter-spacing: -0.04em;
   text-align: left;
 }
 .faq-section .accord-marg .accordion-container .ac {
@@ -48,48 +26,38 @@
 .faq-section .accord-marg .accordion-container .ac:first-child {
   border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
+
 .accordion-container .ac .ac-header .ac-trigger {
   position: relative;
   padding: 0;
-  /* padding: 20px 73px 20px 0px;
-    color: #fafafa;
-    width: 265px; */
 }
 
-.accordion-container .ac .ac-panel .ac-text {
+.accord-marg .accordion-container .ac .ac-panel .ac-text {
   padding: 16px 0 0 0;
-
   color: rgba(250, 250, 250, 0.6);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  font: 'Inter Tight', sans-serif;
-  /* letter-spacing: 0.02em; */
-
-  /* position: relative;
-              padding-bottom: 20px;
-        */
+  font-family: 'Inter Tight', sans-serif;
+  letter-spacing: -0.025em;
 }
 
 .accordion-container .ac .ac-trigger .btn-title-1 {
   width: 290px;
   color: rgb(250, 250, 250);
-  font: 'Inter Tight', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
-  /* letter-spacing: 0.04em; */
+  letter-spacing: -0.02em;
   text-align: left;
   text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .accord-marg .accordion-container .ac {
   border: none;
-  /* border-top: 1px solid #eee; */
 }
-.accordion-container .ac.is-active .ac-panel {
-  /* margin-top: 16px; */
-}
+
 /* ////////////////////////svg////////////////////// */
 
 .accordion-container .ac .ac-trigger::after {
@@ -116,8 +84,15 @@
 .button-icon {
   stroke: #eee;
 }
+.button-icon {
+  transition: transform 600ms linear;
+}
 .button-icon-rotste {
   transform: rotate(180deg);
+}
+
+.button-icon-rotate-off {
+  transform: rotate(0deg);
 }
 
 @media screen and (min-width: 768px) {
@@ -132,29 +107,69 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
+
   .accordion-container .ac .ac-trigger .btn-title-1 {
-    width: 100%;
+    width: 574px;
   }
-  /* .accordion-container .ac.is-active .ac-panel {
-    margin-top: 26px;
-  } */
-  .accordion-container .ac .ac-panel .ac-text {
+
+  .accord-marg .accordion-container .ac .ac-panel .ac-text {
     padding: 26px 48px 0 0;
+  }
+  .accord-marg .accordion-container .ac .ac-panel .first-column {
+    padding-top: 0;
+  }
+  .div-icon {
+    right: 32px;
   }
 }
 @media screen and (min-width: 1440px) {
-    /* .accord-marg {
-      max-width: 1158px;
-    } */
-    .faq-section .accord-marg .accordion-container .ac {
-        max-width: 688px;
-        
-    }
-    .accordion-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        /* height: 332px; */
- max-height: 584px;
-    }
+  .accordion-container {
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .faq-section .accord-marg .accordion-container .ac {
+    width: calc(50% - 10px);
+  }
+
+  .order-one {
+    order: -4;
+  }
+  .accordion-container .ac.order-two {
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+    order: -3;
+  }
+
+  .order-three {
+    order: -2;
+  }
+
+  .order-four {
+    order: -1;
+  }
+
+  .faq-section .accord-marg .accordion-container .ac:nth-child(-n + 3) {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  /* .ac.order-one .div-icon {
+      display: none;
+    }
+  
+    .ac.order-three .div-icon {
+      display: none;
+    }
+  
+    .ac.order .div-icon {
+      display: none;
+    } */
+  .second-column {
+    padding-right: 32px;
+  }
+  .accordion-container .ac .second-column {
+    padding-left: 32px;
+  }
+  .accord-marg .accordion-container .ac .ac-panel .second-column {
+    padding: 26px 48px 0 32px;
+  }
+}
