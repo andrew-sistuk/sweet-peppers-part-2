@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
+// import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 new Accordion('.accordeon', {
   duration: 400,
@@ -15,7 +16,8 @@ new Accordion('.accordeon', {
 new Swiper('.about-me-slider',{
     //стрілки
     navigation:{
-        nextEl: '.about-me-slider-button',
+        // nextEl: '.swiper-button-next',
+        nextEl: '.next-about-me-btn',
         // prevEl: '.swiper-button-prev'
     },
    
@@ -31,5 +33,25 @@ new Swiper('.about-me-slider',{
     },
 
     // slidesPerView: 2,
+
+    //infinity scroll
+    loop: true,
+
+    // кількість прокручуємих слайдів, за допомогою js знайти який у користувача екран і виставити значення
+    // loopedslides: 2,
+    breakpoints:{
+        320: {
+            // loopedslides: 2,
+            slidesPerView: 2,
+        },
+        768: {
+            // loopedslides: 3,
+            slidesPerView: 3,
+        },
+        1440: {
+            // loopedslides: 6,
+            slidesPerView: 6,
+        }
+    }
 
 });

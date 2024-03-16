@@ -187,43 +187,55 @@
 
 /* третя частина about-me sliser */
 
-.about-me-slider {
+.about-me-swiper-container{
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
   padding-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .about-me-swiper-container {
+    gap: 64px;
+    width: 704px;
+    padding-top: 64px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-me-swiper-container {
+    gap: 72px;
+    width: 1312px;
+    padding-top: 96px;
+  }
+}
+
+.about-me-slider {
+  
   display: flex;
   gap: 55px;
-  width: 343px;
+  width: 260px;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .about-me-slider {
     gap: 64px;
-    width: 704px;
+    width: 600px;
+    
+    gap: 64px;
   }
 }
 @media screen and (min-width: 1440px) {
   .about-me-slider {
     gap: 72px;
-    width: 1312px;
+    width: 1200px;
+    
+    gap: 72px;
   }
 }
 
 
-
-@media screen and (min-width: 768px) {
-  .about-me-slider {
-    padding-top: 64px;
-    gap: 64;
-    width: 200xp;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .about-me-slider {
-    padding-top: 96px;
-    gap: 72;
-  }
-}
 
 .about-me-slider-container {
-  display: flex;
+  display: flexbox;
   width: 260px;
   /* overflow: hidden; */
 }
@@ -265,16 +277,29 @@
 }
 
 
-.about-me-slider-button{
+.next-about-me-btn{
+  background-color: transparent;
+    border: none; 
+    padding: 0;
+}
+
+.about-me-next-icon-btn{
   width: 28px;
+  fill: transparent;
+  stroke: #fafafa;
+  stroke-width: 2px;
+  transition: stroke 250ms linear;
 }
 @media screen and (min-width: 768px) {
-  .about-me-slider-button{
+  .about-me-next-icon-btn{
     width: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .about-me-slider-button{
+  .about-me-next-icon-btn{
     width: 40px;
   }
 }
+
+
+
