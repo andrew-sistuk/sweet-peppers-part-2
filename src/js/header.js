@@ -34,13 +34,4 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Header Modal content not found');
     }
   }
-
-  function closeHeaderModal() {
-    const headerModal = document.getElementById('modal-content');
-    if (headerModal) {
-      headerModal.style.display = 'none';
-    } else {
-      console.error('Header Modal content not found');
-    }
-  }
 });
