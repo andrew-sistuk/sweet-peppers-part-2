@@ -60,7 +60,7 @@
 }
 
 .container {
-  /* padding: 0 16px; */
+  padding: 0 16px;
   min-width: 320px;
   max-width: 375px;
 }
