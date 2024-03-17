@@ -1,6 +1,6 @@
 @import url('./reset.css');
 /* @import url('./header.css'); */
-/* @import url('./hero.css'); */
+@import url('./hero.css');
 /* @import url('./about-me.css'); */
 @import url('./benefits.css');
 @import url('./projects.css');
@@ -83,4 +83,3 @@
   .container {
     width: 1440px;
   }
-}
