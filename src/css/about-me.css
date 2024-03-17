@@ -285,11 +285,11 @@
   }
 }
 
-.about-accordion-container .accardeon-item .ac-panel{
+.about-accordion-container .accardeon-item .ac-panel .about-text-first-el{
   padding-top: 11px;
 }
 @media screen and (min-width: 768px) {
-  .about-accordion-container .accardeon-item .ac-panel{
+  .about-accordion-container .accardeon-item .ac-panel .about-text-first-el{
     padding-top: 7px;
   }
 }
