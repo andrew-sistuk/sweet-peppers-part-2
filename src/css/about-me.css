@@ -378,15 +378,22 @@ about-me{
   background-color: transparent;
   border: none;
   padding: 0;
+  outline: none;
 }
 
 .about-me-next-icon-btn {
   width: 28px;
   fill: transparent;
-  stroke: var(--main-white);
+  stroke: var(--arrow-gray);
   stroke-width: 2px;
   transition: stroke 250ms linear;
 }
+.next-about-me-btn:hover .about-me-next-icon-btn,
+.next-about-me-btn:focus .about-me-next-icon-btn
+{ 
+  stroke: var(--main-white);
+}
+
 @media screen and (min-width: 768px) {
   .about-me-next-icon-btn {
     width: 40px;
