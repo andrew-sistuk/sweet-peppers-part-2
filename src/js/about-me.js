@@ -8,7 +8,7 @@ new Accordion('.accordion-container', {
   duration: 800,
   showMultiple: true,
   collapse: true,
-  openOnInit:[0],
+  openOnInit: [0],
   beforeOpen: currElement => {
     const icon = currElement.querySelector('.two-about-button-icon');
     icon.classList.add('two-about-button-icon-rotate');
@@ -21,7 +21,7 @@ new Accordion('.accordion-container', {
 
 window.addEventListener('resize', checkIfCoversInViewAbout);
 function checkIfCoversInViewAbout() {
-    buttonIconAbout.forEach(elem => {
+  buttonIconAbout.forEach(elem => {
     if (elem.classList.contains('about-button-icon-rotate')) {
       elem.classList.remove('about-button-icon-rotate');
     }
@@ -29,13 +29,12 @@ function checkIfCoversInViewAbout() {
   acc.closeAll();
 }
 
-
 const nextButtonAbout = document.querySelector('.next-about-me-btn');
 
 const swiper = new Swiper('.about-me-slider', {
-    modules: [Navigation, Keyboard, Mousewheel],
-    //стрілки
-  Navigation: {  
+  modules: [Navigation, Keyboard, Mousewheel],
+  //стрілки
+  Navigation: {
     nextEl: null,
   },
 
@@ -72,55 +71,55 @@ const swiper = new Swiper('.about-me-slider', {
   },
 });
 
-
-nextButtonAbout.addEventListener('click', function() {
-    swiper.slideNext();
+nextButtonAbout.addEventListener('click', function () {
+  swiper.slideNext();
 });
 
-
 swiper.on('slideNextTransitionStart', function () {
-    const currentSlide = swiper.slides[swiper.activeIndex];
-    const nextSlide = swiper.slides[swiper.activeIndex]; 
-    const otherSlides = document.querySelectorAll('.about-me-slider-item');
+  const currentSlide = swiper.slides[swiper.activeIndex];
+  const nextSlide = swiper.slides[swiper.activeIndex];
+  const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
-    // Змінюємо колір фону наступного слайда на червоний
-    if (nextSlide !== undefined && nextSlide.classList.contains('about-me-slider-item')) {
-        nextSlide.style.backgroundColor = 'var(--main-red)';
+  // Змінюємо колір фону наступного слайда на червоний
+  if (
+    nextSlide !== undefined &&
+    nextSlide.classList.contains('about-me-slider-item')
+  ) {
+    nextSlide.style.backgroundColor = 'var(--main-red)';
+  }
+
+  // Очищаємо фон інших слайдів
+  otherSlides.forEach(slide => {
+    if (slide !== nextSlide) {
+      slide.style.backgroundColor = '';
     }
-
-    // Очищаємо фон інших слайдів
-    otherSlides.forEach(slide => {
-        if (slide !== nextSlide) {
-            slide.style.backgroundColor = '';
-        }
-    });
+  });
 });
 
 swiper.on('slidePrevTransitionStart', function () {
-    const currentSlide = swiper.slides[swiper.activeIndex];
-    const prevSlide = swiper.slides[swiper.activeIndex]; 
-    const otherSlides = document.querySelectorAll('.about-me-slider-item');
+  const currentSlide = swiper.slides[swiper.activeIndex];
+  const prevSlide = swiper.slides[swiper.activeIndex];
+  const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
-    // Змінюємо колір фону попереднього слайда на червоний
-    if (prevSlide !== undefined && prevSlide.classList.contains('about-me-slider-item')) {
-        prevSlide.style.backgroundColor = 'var(--main-red)';
+  // Змінюємо колір фону попереднього слайда на червоний
+  if (
+    prevSlide !== undefined &&
+    prevSlide.classList.contains('about-me-slider-item')
+  ) {
+    prevSlide.style.backgroundColor = 'var(--main-red)';
+  }
+
+  // Очищаємо фон інших слайдів
+  otherSlides.forEach(slide => {
+    if (slide !== prevSlide) {
+      slide.style.backgroundColor = '';
     }
-
-    // Очищаємо фон інших слайдів
-    otherSlides.forEach(slide => {
-        if (slide !== prevSlide) {
-            slide.style.backgroundColor = '';
-        }
-    });
+  });
 });
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const firstSlide = document.querySelector('.about-me-slider-item:first-child');
-    firstSlide.style.backgroundColor = 'var(--main-red)';
+document.addEventListener('DOMContentLoaded', function () {
+  const firstSlide = document.querySelector(
+    '.about-me-slider-item:first-child'
+  );
+  firstSlide.style.backgroundColor = 'var(--main-red)';
 });
-
