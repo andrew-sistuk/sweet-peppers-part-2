@@ -68,12 +68,15 @@ header {
   margin: 0;
   padding: 0;
 }
+
 .header-menu-item {
   white-space: nowrap;
 }
+
 .header-menu-checkbox:checked ~ .header-menu-list {
   display: block;
 }
+
 .button-reset {
   background: none;
   border: none;
@@ -86,6 +89,7 @@ header {
   cursor: pointer;
   outline: none;
 }
+
 .header-order-btn {
   position: static;
   width: 163px;
