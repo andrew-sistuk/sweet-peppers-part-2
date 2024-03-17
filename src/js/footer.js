@@ -10,7 +10,7 @@ const modalBackdropSucces = document.querySelector(".backdrop.succes");
 const modalBackdropError = document.querySelector(".backdrop.error");
 const modalClose = document.querySelectorAll(".modal-close-btn");
 
-const reg = /([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})/;
+const reg = /([A-z0-9_\.\-]{1,})@([A-z0-9_\.\-]{1,})\.([A-z]{2,8})/;
 
 
 emailInput.value = localStorage.getItem('email');
