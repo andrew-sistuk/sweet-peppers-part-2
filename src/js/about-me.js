@@ -2,7 +2,7 @@ import Accordion from 'accordion-js';
 import Swiper from 'swiper';
 
 
-const buttonIconAbout = document.querySelectorAll('.about-button-icon');
+const buttonIconAbout = document.querySelectorAll('.two-about-button-icon');
 
 new Accordion('.accordion-container', {
   duration: 800,
@@ -10,12 +10,12 @@ new Accordion('.accordion-container', {
   collapse: true,
   openOnInit:[0],
   beforeOpen: currElement => {
-    const icon = currElement.querySelector('.about-button-icon');
-    icon.classList.add('about-button-icon-rotate');
+    const icon = currElement.querySelector('.two-about-button-icon');
+    icon.classList.add('two-about-button-icon-rotate');
   },
   beforeClose: currElement => {
-    const icon = currElement.querySelector('.about-button-icon');
-    icon.classList.remove('about-button-icon-rotate');
+    const icon = currElement.querySelector('.two-about-button-icon');
+    icon.classList.remove('two-about-button-icon-rotate');
   },
 });
 

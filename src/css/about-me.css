@@ -112,99 +112,87 @@
 
 /* Друга частина about me (акардеон) */
 
-
-.about-accordion-section{
+.about-accordion-section {
   padding-top: 32px;
 }
 @media screen and (min-width: 768px) {
-  .about-accordion-section{
+  .about-accordion-section {
     padding-top: 64px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .about-accordion-section{
+  .about-accordion-section {
     padding-top: 96px;
   }
 }
 
-.about-accordion-container{
+.about-accordion-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .about-accordion-container{
+  .about-accordion-container {
     gap: 32px;
   }
 }
 
-
-
-.accordion-container .ac .ac-trigger::after{
-  content: "";
+.accordion-container .ac .ac-trigger::after {
+  content: '';
 }
 
-.accordion-container .ac.is-active>.ac-header .ac-trigger::after {
-  content: "";
+.accordion-container .ac.is-active > .ac-header .ac-trigger::after {
+  content: '';
 }
-.about-accordion-section .accordion-container .accardeon-item{
+.about-accordion-section .accordion-container .accardeon-item {
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   padding: 0 0 32px 0;
-
 }
 
-.ac-panel .ac-text.ab-me-accordion-text{
+.ac-panel .ac-text.ab-me-accordion-text {
   padding: 12px 0 0 0;
   /* padding-top: 12px; */
 }
 
-.accordion-container .ac .ac-trigger{
+.accordion-container .ac .ac-trigger {
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between
-} 
-
-
-.about-div-icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #1C1D20;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  justify-content: space-between;
 }
 
-.about-button-icon {
-  stroke: #eee;
-  fill: transparent;
+
+.about-button-icon-cover {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
 }
 @media screen and (min-width: 768px) {
-  .about-button-icon {
+  .about-button-icon-cover {
     width: 40px;
     height: 40px;
   }
 }
 
-.about-button-icon {
+.two-about-button-icon {
+  stroke: #eee;
+  fill: transparent;
+  width: 20px;
+  height: 20px;
+
+}
+
+.two-about-button-icon {
   transition: transform 600ms linear;
 }
-.about-button-icon-rotate {
+.two-about-button-icon-rotate {
   transform: rotate(180deg);
 }
-.about-button-icon-rotate-off {
+.two-about-button-icon-rotate-off {
   transform: rotate(0deg);
 }
 
@@ -220,51 +208,50 @@
   margin-bottom: 0;
 }
 
- .about-accordion-container .ac {
-  margin-top: 0; 
+.about-accordion-container .ac {
+  margin-top: 0;
   border: 0px solid #eee;
   background-color: #1c1d20;
   box-sizing: border-box;
 }
 
-.accardeon-gap{
+.accardeon-gap {
   display: flex;
   flex-direction: column;
-  gap: 32px
+  gap: 32px;
 }
 @media screen and (min-width: 768px) {
-  .accardeon-gap{
-    gap: 16px
+  .accardeon-gap {
+    gap: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .accardeon-gap{
-    gap: 32px
+  .accardeon-gap {
+    gap: 32px;
   }
 }
-.accardeon-gap-second{
+.accardeon-gap-second {
   display: flex;
   flex-direction: column;
-  gap: 10px
+  gap: 10px;
 }
-.accardeon-gap-third{
+.accardeon-gap-third {
   display: flex;
   flex-direction: column;
-  gap: 10px
+  gap: 10px;
 }
 
 @media screen and (min-width: 1440px) {
-  .about-ac-text-first{
+  .about-ac-text-first {
     width: 612px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .about-ac-text-third{
+  .about-ac-text-third {
     width: 435px;
   }
 }
-
 
 .ac .ac-panel .ac-text {
   font-family: 'InterTight-Medium', sans-serif;
@@ -285,28 +272,18 @@
   }
 }
 
-.about-accordion-container .accardeon-item .ac-panel .about-text-first-el{
+.about-accordion-container .accardeon-item .ac-panel .about-text-first-el {
   padding-top: 11px;
 }
 @media screen and (min-width: 768px) {
-  .about-accordion-container .accardeon-item .ac-panel .about-text-first-el{
+  .about-accordion-container .accardeon-item .ac-panel .about-text-first-el {
     padding-top: 7px;
   }
 }
 
-
-.about-button-icon-cover{
-
-}
 /* третя частина about-me slider */
 
-
-
-
-
-
-
-.about-me-swiper-container{
+.about-me-swiper-container {
   display: flex;
   flex-direction: row;
   gap: 55px;
@@ -328,7 +305,6 @@
 }
 
 .about-me-slider {
-  
   display: flex;
   gap: 55px;
   width: 260px;
@@ -338,7 +314,7 @@
   .about-me-slider {
     gap: 64px;
     width: 600px;
-    
+
     gap: 64px;
   }
 }
@@ -346,12 +322,10 @@
   .about-me-slider {
     gap: 72px;
     width: 1200px;
-    
+
     gap: 72px;
   }
 }
-
-
 
 .about-me-slider-container {
   display: flexbox;
@@ -395,14 +369,13 @@
   }
 }
 
-
-.next-about-me-btn{
+.next-about-me-btn {
   background-color: transparent;
-    border: none; 
-    padding: 0;
+  border: none;
+  padding: 0;
 }
 
-.about-me-next-icon-btn{
+.about-me-next-icon-btn {
   width: 28px;
   fill: transparent;
   stroke: #fafafa;
@@ -410,15 +383,12 @@
   transition: stroke 250ms linear;
 }
 @media screen and (min-width: 768px) {
-  .about-me-next-icon-btn{
+  .about-me-next-icon-btn {
     width: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .about-me-next-icon-btn{
+  .about-me-next-icon-btn {
     width: 40px;
   }
 }
-
-
-
