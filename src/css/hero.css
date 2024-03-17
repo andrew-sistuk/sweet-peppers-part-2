@@ -4,6 +4,7 @@
   background-position: left;
   background-size: contain;
 }
+
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -13,6 +14,9 @@
 }
 
 div.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 281px;
   padding-bottom: 32px;
 }
@@ -24,30 +28,46 @@ div.hero-container {
   text-transform: uppercase;
   margin-bottom: 212px;
   max-width: 343px;
-  color: #fafafa;
+  color: var(--main-white);
 }
 
 .soc-networks {
   display: flex;
-  gap: 4px;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  gap: 2px;
 }
 
 .soc-networks-items {
   display: inline-block;
   font-size: 14px;
   border-radius: 60px;
+  letter-spacing: -0.02em;
   padding: 10px;
+  line-height: 1.2;
   color: var(--main-white);
   border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
+.instagram-link,
 .email-link {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 10px 12px;
 }
 
-.email-link:hover,
-.email-link:focus {
+.facebook-link {
+  padding: 10px;
+}
+
+.youtube-link {
+  padding: 10px 11px;
+}
+
+.git-hub {
+  padding: 10px 8px;
+}
+
+.soc-networks-items:hover,
+.soc-networks-items:focus {
   border: 1px solid #fafafa;
 }
 
@@ -80,16 +100,27 @@ div.hero-container {
     }
 
     .soc-networks-items {
-      display: inline-block;
       font-size: 16px;
+    }
+
+    .instagram-link {
+      padding: 18px 20px;
+    }
+
+    .facebook-link {
+      padding: 18px 17px;
+    }
+
+    .youtube-link {
+      padding: 18px;
+    }
+
+    .git-hub {
       padding: 18px 16px;
-      color: var(--main-white);
-      border: 1px solid rgba(250, 250, 250, 0.2);
     }
 
     .email-link {
-      padding-left: 24px;
-      padding-right: 24px;
+      padding: 18px 24px;
     }
   }
 }
@@ -108,6 +139,7 @@ div.hero-container {
   }
 
   .hero-title {
+    font-size: 90px;
     max-width: 1084px;
     margin-bottom: 243px;
     margin-left: auto;
