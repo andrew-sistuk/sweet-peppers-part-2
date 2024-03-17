@@ -30,11 +30,11 @@ function checkIfCoversInViewAbout() {
 }
 
 
-new Swiper('.about-me-slider', {
+const swiper = new Swiper('.about-me-slider', {
   //стрілки
   navigation: {
-    // nextEl: '.swiper-button-next',
-    nextEl: '.next-about-me-btn',
+    nextEl: '.swiper-button-next',
+    // nextEl: '.next-about-me-btn',
     // prevEl: '.swiper-button-prev'
   },
 
@@ -71,3 +71,18 @@ new Swiper('.about-me-slider', {
     },
   },
 });
+
+
+swiper.on('slideChange', function () {
+    const firstSlide = document.querySelector('.about-me-slider-item:first-child');
+    const otherSlides = document.querySelectorAll('.about-me-slider-item:not(:first-child)');
+    firstSlide.style.backgroundColor = 'var(--main-red)'; 
+    otherSlides.forEach(slide => slide.style.backgroundColor = ''); 
+});
+// swiper.on('slideChange', function () {
+//     const currentSlide = document.querySelector('.swiper-slide-active');
+//     const otherSlides = document.querySelectorAll('.swiper-slide:not(.swiper-slide-active)');
+    
+//     currentSlide.style.backgroundColor = 'red'; 
+//     otherSlides.forEach(slide => slide.style.backgroundColor = '');
+// });
