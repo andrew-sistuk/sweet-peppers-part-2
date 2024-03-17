@@ -77,13 +77,14 @@ nextButtonAbout.addEventListener('click', function() {
     swiper.slideNext();
 });
 
-swiper.on('slideChange', function () {
-    const currentSlide = document.querySelector('.swiper-slide-active');
-    const nextSlide = currentSlide.nextElementSibling; 
+
+swiper.on('slideNextTransitionStart', function () {
+    const currentSlide = swiper.slides[swiper.activeIndex];
+    const nextSlide = swiper.slides[swiper.activeIndex]; 
     const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
     // Змінюємо колір фону наступного слайда на червоний
-    if (nextSlide !== null && nextSlide.classList.contains('about-me-slider-item')) {
+    if (nextSlide !== undefined && nextSlide.classList.contains('about-me-slider-item')) {
         nextSlide.style.backgroundColor = 'var(--main-red)';
     }
 
@@ -94,6 +95,29 @@ swiper.on('slideChange', function () {
         }
     });
 });
+
+swiper.on('slidePrevTransitionStart', function () {
+    const currentSlide = swiper.slides[swiper.activeIndex];
+    const prevSlide = swiper.slides[swiper.activeIndex]; 
+    const otherSlides = document.querySelectorAll('.about-me-slider-item');
+
+    // Змінюємо колір фону попереднього слайда на червоний
+    if (prevSlide !== undefined && prevSlide.classList.contains('about-me-slider-item')) {
+        prevSlide.style.backgroundColor = 'var(--main-red)';
+    }
+
+    // Очищаємо фон інших слайдів
+    otherSlides.forEach(slide => {
+        if (slide !== prevSlide) {
+            slide.style.backgroundColor = '';
+        }
+    });
+});
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const firstSlide = document.querySelector('.about-me-slider-item:first-child');
