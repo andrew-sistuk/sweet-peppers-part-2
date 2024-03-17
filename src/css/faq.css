@@ -1,175 +1,160 @@
-/* .accordion-container .ac .ac-trigger {
-  font: bold -1px 'Inter Tight', sans-serif;
-} */
-.faq-section {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.faq {
+  padding: 32px 0;
 }
 
-.accord-header {
-  margin-bottom: 32px;
-  color: rgba(250, 250, 250, 0.4);
-  font-family: 'Inter Tight', sans-serif;
+.faq-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -0.04em;
-  text-align: left;
-}
-.faq-section .accord-marg .accordion-container .ac {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 0;
-  background-color: #1c1d20;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-}
-.faq-section .accord-marg .accordion-container .ac:first-child {
-  border-top: 1px solid rgba(250, 250, 250, 0.2);
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
 }
 
-.accordion-container .ac .ac-header .ac-trigger {
-  position: relative;
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-list .faq-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: solid 1px rgba(250, 250, 250, 0.2);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  background-color: transparent;
+  margin-top: 0;
+}
+
+.faq-item:last-child {
+  border-bottom: solid 1px rgba(250, 250, 250, 0.2);
+}
+
+.faq-item .faq-question {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.faq-list .faq-item .faq-item-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
   padding: 0;
 }
 
-.accord-marg .accordion-container .ac .ac-panel .ac-text {
-  padding: 16px 0 0 0;
-  color: rgba(250, 250, 250, 0.6);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: 'Inter Tight', sans-serif;
-  letter-spacing: -0.025em;
-}
-
-.accordion-container .ac .ac-trigger .btn-title-1 {
-  width: 290px;
-  color: rgb(250, 250, 250);
-  font-family: 'Inter Tight', sans-serif;
+.faq-list .faq-item .faq-item-title {
+  font: inherit;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  text-align: left;
-  text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--main-white);
 }
 
-.accord-marg .accordion-container .ac {
-  border: none;
+.faq-item-title-text {
+  width: 265px;
 }
 
-/* ////////////////////////svg////////////////////// */
-
-.accordion-container .ac .ac-trigger::after {
-  content: '';
+.faq-item-title-text:nth-child(2) .faq-item-title {
+  width: 230px;
 }
 
-.accordion-container .ac.is-active > .ac-header .ac-trigger::after {
-  content: '';
+.faq-item-title-text:nth-child(5) .faq-item-title {
+  width: 206px;
 }
 
-.div-icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #1c1d20;
+.faq-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 34px;
   height: 34px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: transform 1s;
 }
-.button-icon {
-  stroke: #eee;
+
+.faq-list .faq-item .faq-item-title::after {
+  content: none;
 }
-.button-icon {
-  transition: transform 600ms linear;
+
+.faq-btn-icon {
+  stroke: var(--main-white);
+  fill: transparent;
 }
-.button-icon-rotste {
+
+.faq-item-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.is-active .faq-btn {
   transform: rotate(180deg);
 }
 
-.button-icon-rotate-off {
-  transform: rotate(0deg);
-}
-
 @media screen and (min-width: 768px) {
-  .accord-marg {
-    max-width: 768px;
-  }
-  .faq-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .faq-section .accord-marg .accordion-container .ac {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  .faq {
+    padding: 48px 0;
   }
 
-  .accordion-container .ac .ac-trigger .btn-title-1 {
+  .faq-item {
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  .faq-item-title-text,
+  .faq-item:nth-child(2) .faq-item-title-text,
+  .faq-item:nth-child(5) .faq-item-title-text {
     width: 574px;
   }
 
-  .accord-marg .accordion-container .ac .ac-panel .ac-text {
-    padding: 26px 48px 0 0;
+  .faq-item:last-child .faq-item-title-text {
+    width: 470px;
   }
-  .accord-marg .accordion-container .ac .ac-panel .first-column {
-    padding-top: 0;
-  }
-  .div-icon {
-    right: 32px;
+
+  .faq-item-text {
+    max-width: 656px;
   }
 }
+
 @media screen and (min-width: 1440px) {
-  .accordion-container {
-    display: flex;
-    flex-wrap: wrap;
+  .faq {
+    padding: 82px 0;
   }
 
-  .faq-section .accord-marg .accordion-container .ac {
-    width: calc(50% - 10px);
+  .faq-list {
+    display: block;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-gap: 0;
   }
 
-  .order-one {
-    order: -4;
-  }
-  .accordion-container .ac.order-two {
-    border-top: 1px solid rgba(250, 250, 250, 0.2);
-    order: -3;
+  .faq-item {
+    break-inside: avoid;
   }
 
-  .order-three {
-    order: -2;
-  }
-
-  .order-four {
-    order: -1;
-  }
-
-  .faq-section .accord-marg .accordion-container .ac:nth-child(-n + 3) {
-    border-right: 1px solid rgba(250, 250, 250, 0.2);
-  }
-
-  /* .ac.order-one .div-icon {
-      display: none;
-    }
-  
-    .ac.order-three .div-icon {
-      display: none;
-    }
-  
-    .ac.order .div-icon {
-      display: none;
-    } */
-  .second-column {
+  .faq-item:nth-child(-n + 3) {
+    border-right: solid 1px rgba(250, 250, 250, 0.2);
     padding-right: 32px;
   }
-  .accordion-container .ac .second-column {
-    padding-left: 32px;
+
+  .faq-item:nth-child(3) {
+    border-bottom: solid 1px rgba(250, 250, 250, 0.2);
   }
-  .accord-marg .accordion-container .ac .ac-panel .second-column {
-    padding: 26px 48px 0 32px;
+
+  .faq-item:nth-child(3) .faq-item-text {
+    margin-bottom: 26px;
+  }
+
+  .faq-item:nth-child(n + 4) {
+    padding-left: 32px;
+    border-left: solid 1px rgba(250, 250, 250, 0.2);
+    margin-left: -1px;
   }
 }
