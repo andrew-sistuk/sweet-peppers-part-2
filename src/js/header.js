@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   headerMenuButton.addEventListener('click', function () {
     if (!modalContentLoaded) {
       const modalXhr = new XMLHttpRequest();
+
       modalXhr.open('GET', './partials/modal.html', true);
       modalXhr.onload = function () {
         if (modalXhr.status >= 200 && modalXhr.status < 300) {
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openHeaderModal() {
     const headerModal = document.getElementById('modal-content');
+
     if (headerModal) {
       headerModal.style.display = 'block';
     } else {

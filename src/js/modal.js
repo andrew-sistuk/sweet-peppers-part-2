@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeButton = event.target.closest('#close-menu');
     const menuItemLink = event.target.closest('.header-modal-menu-item');
     const orderButton = event.target.closest('.header-modal-menu-button');
-
     if (closeButton || menuItemLink || orderButton) {
       const overlay = document.querySelector('.overlay');
       if (overlay) {
