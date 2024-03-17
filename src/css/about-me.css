@@ -1,4 +1,6 @@
 @import 'swiper/css';
+/* @import 'swiper-bundle.css'; */
+@import 'swiper/swiper-bundle.css';
 @import 'accordion-js/dist/accordion.min.css';
 
 @media screen and (min-width: 375px) {

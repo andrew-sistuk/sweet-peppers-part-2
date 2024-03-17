@@ -1,6 +1,6 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
-
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const buttonIconAbout = document.querySelectorAll('.two-about-button-icon');
 
@@ -30,22 +30,23 @@ function checkIfCoversInViewAbout() {
 }
 
 
+const nextButtonAbout = document.querySelector('.next-about-me-btn');
+
 const swiper = new Swiper('.about-me-slider', {
-  //стрілки
-  navigation: {
-    nextEl: '.swiper-button-next',
-    // nextEl: '.next-about-me-btn',
-    // prevEl: '.swiper-button-prev'
+    modules: [Navigation, Keyboard, Mousewheel],
+    //стрілки
+  Navigation: {  
+    nextEl: null,
   },
 
   slideToClickedSlide: true,
 
-  keyboard: {
+  Keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
 
-  mousewheel: {
+  Mousewheel: {
     sensitivity: 1,
   },
 
@@ -54,7 +55,6 @@ const swiper = new Swiper('.about-me-slider', {
   //infinity scroll
   loop: true,
 
-  // кількість прокручуємих слайдів, за допомогою js знайти який у користувача екран і виставити значення
   // loopedslides: 2,
   breakpoints: {
     320: {
@@ -73,16 +73,30 @@ const swiper = new Swiper('.about-me-slider', {
 });
 
 
-swiper.on('slideChange', function () {
-    const firstSlide = document.querySelector('.about-me-slider-item:first-child');
-    const otherSlides = document.querySelectorAll('.about-me-slider-item:not(:first-child)');
-    firstSlide.style.backgroundColor = 'var(--main-red)'; 
-    otherSlides.forEach(slide => slide.style.backgroundColor = ''); 
+nextButtonAbout.addEventListener('click', function() {
+    swiper.slideNext();
 });
-// swiper.on('slideChange', function () {
-//     const currentSlide = document.querySelector('.swiper-slide-active');
-//     const otherSlides = document.querySelectorAll('.swiper-slide:not(.swiper-slide-active)');
-    
-//     currentSlide.style.backgroundColor = 'red'; 
-//     otherSlides.forEach(slide => slide.style.backgroundColor = '');
-// });
+
+swiper.on('slideChange', function () {
+    const currentSlide = document.querySelector('.swiper-slide-active');
+    const nextSlide = currentSlide.nextElementSibling; 
+    const otherSlides = document.querySelectorAll('.about-me-slider-item');
+
+    // Змінюємо колір фону наступного слайда на червоний
+    if (nextSlide !== null && nextSlide.classList.contains('about-me-slider-item')) {
+        nextSlide.style.backgroundColor = 'var(--main-red)';
+    }
+
+    // Очищаємо фон інших слайдів
+    otherSlides.forEach(slide => {
+        if (slide !== nextSlide) {
+            slide.style.backgroundColor = '';
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const firstSlide = document.querySelector('.about-me-slider-item:first-child');
+    firstSlide.style.backgroundColor = 'var(--main-red)';
+});
+
