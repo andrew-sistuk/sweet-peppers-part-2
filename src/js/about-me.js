@@ -1,10 +1,10 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+// import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const buttonIconAbout = document.querySelectorAll('.two-about-button-icon');
 
-const aboutMeAcc = new Accordion('.accordion-container', {
+const aboutMeAcc = new Accordion('.about-accordion-container', {
   duration: 700,
   showMultiple: true,
   collapse: true,
