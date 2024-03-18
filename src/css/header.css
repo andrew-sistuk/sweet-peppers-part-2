@@ -1,32 +1,29 @@
-header {
-  background-color: rgba(255, 255, 255, 0);
-  padding-top: 32px;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
 }
+
 .header-container {
-  position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-
-.header-menu-container {
   position: relative;
+  margin-top: 32px;
 }
 
-.header-menu-container,
-.header-order-btn {
-  align-self: flex-start;
-}
-/*стилі тексту*/
 .header-text {
   font-family: InterTight-Medium sans-serif;
   color: var(--main-white);
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.02em;
 }
-/* Логотип */
 
 .header-logo {
   display: flex;
@@ -47,34 +44,40 @@ header {
   left: 88px;
 }
 
-/* Меню */
-.header-menu-button {
+.header-menu-container {
+  display: flex;
+  flex-direction: row;
+}
+.header-menu {
   text-decoration: underline;
   color: inherit;
   cursor: pointer;
 }
 
-.header-menu-checkbox {
-  display: none;
-}
-
 .header-menu-list {
   display: none;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  top: calc(100% + 15px);
   left: 50%;
+  white-space: nowrap;
   transform: translateX(-50%);
   text-align: center;
-  margin: 0;
+  margin-top: 15px;
   padding: 0;
 }
 
-.header-menu-item {
-  white-space: nowrap;
+.header-list-container {
+  position: relative;
 }
 
-.header-menu-checkbox:checked ~ .header-menu-list {
+.open_list:checked ~ .header-menu-list {
   display: block;
+}
+
+.open_list {
+  position: absolute;
+  opacity: 0;
 }
 
 .button-reset {
@@ -94,8 +97,6 @@ header {
   position: static;
   width: 163px;
   height: 55px;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 18px 24px;
@@ -105,58 +106,41 @@ header {
   cursor: pointer;
 }
 
-.header-menu-link-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-/* Медіа-запити */
-@media screen and (max-width: 375px) {
-  .header-container > *:not(.header-logo):not(.header-menu-link-btn) {
+@media screen and (max-width: 768px) {
+  .header-menu-container {
     display: none;
   }
   .header-menu-link-btn {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-  .header-menu-checkbox:checked ~ .header-menu-list {
+}
+
+@media screen and (min-width: 769px) {
+  .header-menu-link-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-menu-link-btn {
     display: block;
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 767px) {
-  .header-order-btn {
-    display: block;
-    margin-bottom: 64px;
+@media (min-width: 376px) {
+  .header-list-container {
+    margin-right: 164px;
   }
-  .header-menu-container {
-    display: block;
-  }
-}
-@media screen and (max-width: 767px) {
-  .header-container > *:not(.header-menu-link-btn):not(.header-logo) {
-    display: none;
-  }
-  .header-menu-link-btn {
-    display: block;
-  }
-  .header-menu-checkbox:checked ~ .header-menu-list {
-    display: block;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header-menu-link-btn {
-    display: none;
-  }
-  .header-container > *:not(.header-menu-link-btn) {
-    display: block;
+  .header-list-container {
+    margin-right: 164px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .header-menu-link-btn {
-    display: none;
-  }
-  .header-container > *:not(.header-menu-link-btn) {
-    display: block;
+  .header-list-container {
+    margin-right: 500px;
   }
 }

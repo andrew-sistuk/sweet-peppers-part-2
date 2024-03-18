@@ -1,39 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const headerMenuButton = document.getElementById('open-menu');
-  let modalContentLoaded = false;
+  const openMenuButton = document.getElementById('open-menu');
+  const modal = document.querySelector('.overlay');
 
-  headerMenuButton.addEventListener('click', function () {
-    if (!modalContentLoaded) {
-      const modalXhr = new XMLHttpRequest();
+  function openModal() {
+    modal.classList.add('is-open');
+  }
 
-      modalXhr.open('GET', './partials/modal.html', true);
-      modalXhr.onload = function () {
-        if (modalXhr.status >= 200 && modalXhr.status < 300) {
-          const modalContent = modalXhr.responseText;
-          document.body.insertAdjacentHTML('beforeend', modalContent);
-          modalContentLoaded = true;
-          openHeaderModal();
-        } else {
-          console.error(
-            'Failed to load modal content:',
-            modalXhr.status,
-            modalXhr.statusText
-          );
-        }
-      };
-      modalXhr.send();
-    } else {
-      openHeaderModal();
-    }
-  });
-
-  function openHeaderModal() {
-    const headerModal = document.getElementById('modal-content');
-
-    if (headerModal) {
-      headerModal.style.display = 'block';
-    } else {
-      console.error('Header Modal content not found');
+  function closeModal(event) {
+    if (
+      event.target.closest('.modal-icon-container') ||
+      event.target.classList.contains('header-modal-menu-button')
+    ) {
+      modal.classList.remove('is-open');
     }
   }
+
+  const menuItems = document.querySelectorAll('.header-modal-menu-item');
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+    });
+  });
+
+  openMenuButton.addEventListener('click', openModal);
+  document.addEventListener('click', closeModal);
 });
