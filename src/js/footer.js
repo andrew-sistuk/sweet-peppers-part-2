@@ -4,9 +4,8 @@ import {getPortfolioRequest} from "./portfolio"
 const form = document.querySelector('.work-form');
 const succesText = document.querySelector('.succes-text');
 const invalidText = document.querySelector('.invalid-text');
-const modalBackdropSucces = document.querySelector(".backdrop.succes");
-const modalBackdropError = document.querySelector(".backdrop.error");
-const modalClose = document.querySelectorAll(".modal-close-btn");
+const modalBackdrop = document.querySelector(".backdrop");
+
 
 const reg = /([A-z0-9_\.\-]{1,})@([A-z0-9_\.\-]{1,})\.([A-z]{2,8})/;
 
@@ -63,51 +62,55 @@ async function sendRequest(event){
     localStorage.removeItem('comment');
     form.elements['email'].classList.remove('succes');
     succesText.classList.add("visually-hidden");
-    
-    modalBackdropSucces.classList.remove("visually-hidden");
-    modalBackdropSucces.addEventListener('click', clickOnBackdrop);
-    modalClose[0].addEventListener('click', clickOnModalClose)
+    document.querySelector('.modal-text').textContent = "The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.";
+    document.querySelector('.modal-title').textContent = 'Thank you for your interest in cooperation!';
+    modalBackdrop.classList.remove("visually-hidden");
+    const modalClose = document.querySelector(".modal-close-btn");
+    modalBackdrop.addEventListener('click', clickOnBackdrop);
+    modalClose.addEventListener('click', clickOnModalClose)
     document.addEventListener("keydown", pressEscape); 
   }).catch(error => {
     console.log(error)
-    document.querySelector('.modal-text-error').textContent = error.response.data.message;
-    modalBackdropError.classList.remove("visually-hidden");
-    modalBackdropError.addEventListener('click', clickOnBackdropError);
-    modalClose[1].addEventListener('click', clickOnModalCloseError)
+    document.querySelector('.modal-text').textContent = error.response.data.message;
+    document.querySelector('.modal-title').textContent = 'ERROR!!!';
+    modalBackdrop.classList.remove("visually-hidden");
+    const modalClose = document.querySelector(".modal-close-btn");
+    modalBackdrop.addEventListener('click', clickOnBackdropError);
+    modalClose.addEventListener('click', clickOnModalCloseError)
     document.addEventListener("keydown", pressEscapeError);
   });
 }
 
 
 function clickOnBackdrop(event){
-  if(event.target === modalBackdropSucces){
-    modalBackdropSucces.classList.add("visually-hidden");
+  if(event.target === modalBackdrop){
+    modalBackdrop.classList.add("visually-hidden");
   }
 }
 
 function clickOnModalClose(event){
-    modalBackdropSucces.classList.add("visually-hidden");
+    modalBackdrop.classList.add("visually-hidden");
 }
 
 function pressEscape(event){
   if (event.code == "Escape") {
-    modalBackdropSucces.classList.add("visually-hidden");
+    modalBackdrop.classList.add("visually-hidden");
   }
 }
 
 function clickOnBackdropError(event){
-  if(event.target === modalBackdropError){
-    modalBackdropError.classList.add("visually-hidden");
+  if(event.target === modalBackdrop){
+    modalBackdrop.classList.add("visually-hidden");
   }
 }
 
 function clickOnModalCloseError(event){
-    modalBackdropError.classList.add("visually-hidden");
+    modalBackdrop.classList.add("visually-hidden");
 }
 
 function pressEscapeError(event){
   if (event.code == "Escape") {
-    modalBackdropError.classList.add("visually-hidden");
+    modalBackdrop.classList.add("visually-hidden");
   }
 }
 
