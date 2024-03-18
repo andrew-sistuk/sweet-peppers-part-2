@@ -1,0 +1,346 @@
+@import 'swiper/css';
+@import 'swiper/swiper-bundle.css';
+@import 'accordion-js/dist/accordion.min.css';
+
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+  min-width: 0;
+  width: 343px;
+  padding-bottom: 32px;
+}
+
+/* IMG Section */
+.about-me-first-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-first-section-text-container {
+  display: block;
+  border-radius: 24px;
+  width: 343px;
+  padding: 32px 30px 270px 30px;
+  background-color: var(--cards-black);
+}
+
+.about-first-section-text {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  width: 283px;
+}
+
+.about-first-section-text-sekond-color {
+  color: var(--main-red);
+}
+.about-first-section-text-third-color {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.about-first-section-image {
+  width: 343px;
+}
+
+/* Accordion */
+.about-accordion-section {
+  padding-top: 32px;
+}
+
+.about-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-container .ac .ac-trigger::after {
+  content: '';
+}
+
+.accordion-container .ac.is-active > .ac-header .ac-trigger::after {
+  content: '';
+}
+.about-accordion-section .accordion-container .accardeon-item {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  padding: 0 0 32px 0;
+}
+
+.ac-panel .ac-text.ab-me-accordion-text {
+  padding: 12px 0 0 0;
+
+}
+
+.accordion-container .ac .ac-trigger.about-ac-trigger {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-button-icon-cover {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.two-about-button-icon {
+  stroke: #eee;
+  fill: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+.two-about-button-icon {
+  transition: transform 700ms linear;
+}
+
+.ac.accardeon-item.is-active .two-about-button-icon {
+  transform: rotate(180deg);
+}
+
+.accardeon-heading {
+  font-family: 'InterTight-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 0;
+}
+
+.about-accordion-container .ac {
+  margin-top: 0;
+  border: 0px;
+  background-color: var(--backround-black);
+  box-sizing: border-box;
+}
+
+.accardeon-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.accardeon-gap-second {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.accardeon-gap-third {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ac .ac-panel .ac-text.about-ac-text {
+  font-family: 'InterTight-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: var(--main-white);
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-accordion-container .accardeon-item .ac-panel .about-text-first-el {
+  padding-top: 11px;
+}
+
+
+/* SWIPER */
+.about-me-swiper-container {
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
+  padding-top: 32px;
+}
+
+.about-me-slider {
+  display: flex;
+  gap: 55px;
+  width: 260px;
+  
+  overflow: hidden;
+}
+
+.about-me-slider-container {
+  display: flexbox;
+  width: 260px;
+  
+}
+
+.about-me-slider-item,
+.swiper-slide {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'InterTight-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: left;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  
+}
+
+.next-about-me-btn {
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+  outline: transparent;
+}
+
+.about-me-next-icon-btn {
+  width: 28px;
+  fill: transparent;
+  stroke: var(--arrow-gray);
+  stroke-width: 2px;
+  transition: stroke 250ms linear;
+}
+.next-about-me-btn:hover .about-me-next-icon-btn,
+.next-about-me-btn:focus .about-me-next-icon-btn
+{ 
+  stroke: var(--main-white);
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .about-me-container {
+    width: 704px;
+    padding-bottom: 48px;
+  }
+
+  /* IMG Section */
+  .about-first-section-text-container {
+    width: 704px;
+    padding: 64px 64px 435px 64px;
+  }
+  .about-first-section-text {
+    font-size: 38px;
+    width: 576px;
+    line-height: 1.05;
+  }
+  .about-first-section-image {
+    width: 704px;
+  }
+
+
+  /* Accordion */
+  .about-accordion-section {
+    padding-top: 64px;
+  }
+  .about-accordion-container {
+    gap: 32px;
+  }
+  .about-button-icon-cover {
+    width: 40px;
+    height: 40px;
+  }
+  .accardeon-gap {
+    gap: 16px;
+  }
+  .about-accordion-container .accardeon-item .ac-panel .about-text-first-el {
+    padding-top: 7px;
+  }
+
+
+  /* SWIPER */
+  .about-me-swiper-container {
+    gap: 64px;
+    width: 704px;
+    padding-top: 64px;
+  }
+  .about-me-slider {
+    gap: 64px;
+    width: 600px;
+    gap: 64px;
+  }
+  .about-me-slider-container {
+    width: 400xpx;
+  }
+  .about-me-slider-item,
+  .swiper-slide {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+  .about-me-next-icon-btn {
+    width: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me-container {
+    width: 1376px;
+    padding-bottom: 82px;
+  }
+
+  /* Img section */
+  .about-me-first-section-container {
+    flex-direction: row;
+  }
+  .about-first-section-text-container {
+    width: 680px;
+  }
+  .about-first-section-text {
+    width: 552px;
+  }
+  .about-first-section-image {
+    width: 680px;
+  }
+
+
+  /* Accordion */
+  .about-accordion-section {
+    padding-top: 96px;
+  }
+  .accardeon-gap {
+    gap: 32px;
+  }
+  .about-ac-text-first {
+    width: 612px;
+  }
+  .about-ac-text-third {
+    width: 435px;
+  }
+  .ac .ac-panel .ac-text.about-ac-text {
+    margin-left: 696px;
+  }
+
+  /* SWIPER */
+  .about-me-swiper-container {
+    gap: 72px;
+    width: 1312px;
+    padding-top: 96px;
+  }
+  .about-me-slider {
+    gap: 72px;
+    width: 1200px;
+    gap: 72px;
+  }
+  .about-me-slider-container {
+    width: 1200px;
+  }
+  .about-me-next-icon-btn {
+    width: 40px;
+  }
+}

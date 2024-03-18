@@ -1,7 +1,7 @@
 @import url('./reset.css');
 /* @import url('./header.css'); */
 @import url('./hero.css');
-/* @import url('./about-me.css'); */
+@import url('./about-me.css');
 @import url('./benefits.css');
 @import url('./projects.css');
 @import url('./faq.css');
@@ -72,7 +72,7 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    padding: 0 32px;
+    /* padding: 0 32px; */
     width: 768px;
     min-width: none;
     max-width: none;
