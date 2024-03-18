@@ -1,66 +1,20 @@
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
-import axios from 'axios';
-
-new Swiper('.swiper', {
-  modules: [Navigation, Keyboard, Mousewheel],
-  speed: 800,
-  grabCursor: true,
-  allowTouchMove: true,
-  direction: 'horizontal',
-  watchOverflow: true,
-  spaceBetween: 16,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-    pageUpDown: true,
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerGroup: 1,
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerGroup: 2,
-      slidesPerView: 2,
-    },
-    1440: {
-      slidesPerGroup: 4,
-      slidesPerView: 4,
-    },
-  },
-
-  virtual: {
-    slides: function () {},
-  },
-});
-
-const baseUrl = 'https://portfolio-js.b.goit.study/api';
+import { getPortfolioReviews } from './portfolio.js';
 const reviewsList = document.querySelector('.reviews-list');
 
-async function getReviews() {
-  try {
-    let response = await axios.get(`${baseUrl}/reviews`);
-
-    if (!response.data) {
-      throw new Error();
+getPortfolioReviews()
+  .then(response => {
+    if (!response.statusText === 'OK') {
+      throw new Error('Empty response data');
     }
 
     renderReviews(response.data, reviewsList, true);
-  } catch (error) {
+  })
+  .catch(() => {
     showMessage('Server error. Please try again!');
-    renderReviews(null, reviewsList, false);
-  }
-}
-
-getReviews();
+    renderReviews([], reviewsList, false);
+  });
 
 function renderReviews(reviews, reviewList, ok) {
   if (ok) {
@@ -109,9 +63,50 @@ function showMessage(message) {
   popup.textContent = message;
 
   document.body.appendChild(popup);
-  popup.classList.add('active');
 
-  setTimeout(function () {
-    popup.remove();
+  setTimeout(() => {
+    popup.classList.add('activate-popup-animation');
+  }, 50);
+
+  setTimeout(() => {
+    popup.classList.remove('activate-popup-animation');
   }, 4000);
+
+  setTimeout(popup.remove.bind(popup), 5000);
 }
+
+new Swiper('.swiper', {
+  modules: [Navigation, Keyboard, Mousewheel],
+  speed: 800,
+  grabCursor: true,
+  allowTouchMove: true,
+  direction: 'horizontal',
+  watchOverflow: true,
+  spaceBetween: 16,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+    },
+    1440: {
+      slidesPerGroup: 4,
+      slidesPerView: 4,
+    },
+  },
+});

@@ -149,9 +149,9 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   z-index: 9999; 
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
-.popup-server-error.active {
+.popup-server-error.activate-popup-animation {
   opacity: 1;
 }
