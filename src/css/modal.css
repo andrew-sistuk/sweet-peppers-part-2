@@ -46,6 +46,7 @@
 }
 
 .header-modal-menu-item {
+  text-transform: uppercase;
   white-space: nowrap;
   text-transform: uppercase;
   text-decoration: underline;

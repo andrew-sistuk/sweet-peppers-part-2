@@ -2,37 +2,49 @@
   <div class="header-container container">
     <div class="header-logo">
       <a href="index.html" class="header-logo-link">
-        <img
-          src="./img/logo.webp"
-          srcset="./img/logo.webp 1x, ./img/logo@2x.webp 2x"
-          alt="man-logo"
-          class="header-logo-img"
-        />
+        <picture class="form-logo">
+          <source
+            srcset="../img/main-logo.webp, ../img/main-logo@2x.webp 2x"
+            media="(min-width: 768px)"
+            width="77"
+            height="77"
+          />
+          <source
+            srcset="../img/logo.webp, ../img/logo@2x.webp 2x"
+            alt="MDN"
+            width="44"
+            height="44"
+          />
+          <img src="../img/logo.webp" alt="MDN" width="44" height="44" />
+        </picture>
         <p class="header-logo-text header-text">jefferson*</p>
       </a>
     </div>
     <div class="header-menu-container menu-container">
-      <div class="header-list-container">
-        <input type="checkbox" class="open_list" />
-        <span class="header-menu">Menu</span>
-        <ul id="header-menu-list" class="header-menu-list header-text">
-          <li class="header-menu-item header-text">
-            <a href="#about-me">About me</a>
-          </li>
-          <li class="header-menu-item header-text">
-            <a href="#benefits">Benefits</a>
-          </li>
-          <li class="header-menu-item header-text">
-            <a href="#projects">Projects</a>
-          </li>
-          <li class="header-menu-item header-text"><a href="#faq">FAQ</a></li>
-        </ul>
+      <div class="header-menu-container menu-container">
+        <div class="header-list-container">
+          <input type="checkbox" class="open_list" />
+          <span class="header-menu">Menu</span>
+          <ul id="header-menu-list" class="header-menu-list header-text">
+            <li class="header-menu-item header-text">
+              <a href="#about-me">About me</a>
+            </li>
+            <li class="header-menu-item header-text">
+              <a href="#benefits">Benefits</a>
+            </li>
+            <li class="header-menu-item header-text">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="header-menu-item header-text"><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
       </div>
 
       <button class="header-order-btn header-text" type="button">
         Order the project
       </button>
     </div>
+
     <div class="header-menu-link-btn">
       <button class="header-btn button-reset" id="open-menu">
         <svg class="header-menu-svg" width="28" height="28">
