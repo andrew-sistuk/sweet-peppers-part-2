@@ -8,8 +8,4 @@ const acc = new Accordion('.accordion-container', {
 //закриття accordion при виході секції за межі viewport
 const faqSection = document.querySelector('.faq');
 
-faqSection.addEventListener('mouseleave', scrollAction);
-
-function scrollAction(event) {
-  acc.closeAll();
-}
+faqSection.addEventListener('mouseleave', acc.closeAll);
