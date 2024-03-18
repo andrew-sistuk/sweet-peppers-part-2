@@ -60,6 +60,33 @@ const swiper = new Swiper('.about-me-slider', {
 });
 
 
+document.querySelector('.about-me-swiper-container').addEventListener('mouseover', function() {
+  document.addEventListener('keydown', keyPressHandler);
+});
+
+document.querySelector('.about-me-swiper-container').addEventListener('focusin', function() {
+  document.addEventListener('keydown', keyPressHandler);
+});
+
+// Видаляємо обробник події при знятті ховера або фокусу
+document.querySelector('.about-me-swiper-container').addEventListener('mouseout', function() {
+  document.removeEventListener('keydown', keyPressHandler);
+});
+
+document.querySelector('.about-me-swiper-container').addEventListener('focusout', function() {
+  document.removeEventListener('keydown', keyPressHandler);
+});
+
+// Функція обробника події
+function keyPressHandler(event) {
+  if (event.key === 'ArrowLeft') {
+    swiper.slidePrev();
+  } else if (event.key === 'ArrowRight') {
+    swiper.slideNext();
+  }
+}
+
+
 
 // підключення кнопки
 const nextButtonAbout = document.querySelector('.next-about-me-btn');
