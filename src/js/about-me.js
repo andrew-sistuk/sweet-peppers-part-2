@@ -19,6 +19,7 @@ new Accordion('.accordion-container', {
   },
 });
 
+//перезавантаження акордеону під час зміни маштабу
 window.addEventListener('resize', checkIfCoversInViewAbout);
 function checkIfCoversInViewAbout() {
   buttonIconAbout.forEach(elem => {
@@ -29,7 +30,7 @@ function checkIfCoversInViewAbout() {
   acc.closeAll();
 }
 
-const nextButtonAbout = document.querySelector('.next-about-me-btn');
+
 
 const swiper = new Swiper('.about-me-slider', {
   modules: [Navigation, Keyboard, Mousewheel],
@@ -49,34 +50,36 @@ const swiper = new Swiper('.about-me-slider', {
     sensitivity: 1,
   },
 
-  // slidesPerView: 2,
 
   //infinity scroll
   loop: true,
 
-  // loopedslides: 2,
   breakpoints: {
     320: {
-      // loopedslides: 2,
       slidesPerView: 2,
     },
     768: {
-      // loopedslides: 3,
       slidesPerView: 3,
     },
     1440: {
-      // loopedslides: 6,
       slidesPerView: 6,
     },
   },
 });
 
+
+
+// підключення кнопки
+const nextButtonAbout = document.querySelector('.next-about-me-btn');
+
 nextButtonAbout.addEventListener('click', function () {
   swiper.slideNext();
 });
 
+
+
+// Зміна бекграунду першого елемента
 swiper.on('slideNextTransitionStart', function () {
-  const currentSlide = swiper.slides[swiper.activeIndex];
   const nextSlide = swiper.slides[swiper.activeIndex];
   const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
@@ -97,7 +100,6 @@ swiper.on('slideNextTransitionStart', function () {
 });
 
 swiper.on('slidePrevTransitionStart', function () {
-  const currentSlide = swiper.slides[swiper.activeIndex];
   const prevSlide = swiper.slides[swiper.activeIndex];
   const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
@@ -117,6 +119,8 @@ swiper.on('slidePrevTransitionStart', function () {
   });
 });
 
+
+// задаєм бекграунд першому елементу при завантаженні
 document.addEventListener('DOMContentLoaded', function () {
   const firstSlide = document.querySelector(
     '.about-me-slider-item:first-child'
