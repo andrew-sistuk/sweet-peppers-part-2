@@ -52,9 +52,7 @@
 }
 
 .faq-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 6px;
   width: 34px;
   height: 34px;
   border-radius: 50%;
