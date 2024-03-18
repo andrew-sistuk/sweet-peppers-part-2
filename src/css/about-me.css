@@ -9,8 +9,7 @@
   padding-top: 64px;
   min-width: 0;
   width: 343px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 32px;
 }
 
 /* IMG Section */
@@ -23,22 +22,18 @@
 .about-first-section-text-container {
   display: block;
   border-radius: 24px;
-  background-color: var(--cards-black);
   width: 343px;
-  height: 500px;
-  padding: 32px 30px;
+  padding: 32px 30px 270px 30px;
+  background-color: var(--cards-black);
 }
 
 .about-first-section-text {
-  font-family: 'InterTight-Medium', sans-serif;
-  font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
   width: 283px;
-  height: 196px;
 }
 
 .about-first-section-text-sekond-color {
@@ -50,7 +45,6 @@
 
 .about-first-section-image {
   width: 343px;
-  height: 500px;
 }
 
 /* Accordion */
@@ -106,7 +100,7 @@
 }
 
 .two-about-button-icon {
-  transition: transform 1000ms linear;
+  transition: transform 700ms linear;
 }
 
 .ac.accardeon-item.is-active .two-about-button-icon {
@@ -114,7 +108,7 @@
 }
 
 .accardeon-heading {
-  font-family: 'InterTight-Medium', sans-serif;
+  font-family: 'InterTight-SemiBold', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -127,7 +121,7 @@
 
 .about-accordion-container .ac {
   margin-top: 0;
-  border: 0px solid #eee;
+  border: 0px;
   background-color: var(--backround-black);
   box-sizing: border-box;
 }
@@ -200,7 +194,7 @@
   font-family: 'InterTight-Medium', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   text-align: left;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -232,23 +226,21 @@
 
   .about-me-container {
     width: 704px;
+    padding-bottom: 48px;
   }
 
   /* IMG Section */
   .about-first-section-text-container {
     width: 704px;
-    height: 700px;
-    padding: 64px 64px;
+    padding: 64px 64px 435px 64px;
   }
   .about-first-section-text {
     font-size: 38px;
     width: 576px;
-    height: 200px;
-    line-height: 40px;
+    line-height: 1.05;
   }
   .about-first-section-image {
     width: 704px;
-    height: 700px;
   }
 
 
@@ -299,6 +291,7 @@
 @media screen and (min-width: 1440px) {
   .about-me-container {
     width: 1376px;
+    padding-bottom: 82px;
   }
 
   /* Img section */
@@ -313,7 +306,6 @@
   }
   .about-first-section-image {
     width: 680px;
-    height: 700px;
   }
 
 
@@ -352,5 +344,3 @@
     width: 40px;
   }
 }
-
-

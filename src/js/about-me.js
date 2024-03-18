@@ -4,44 +4,18 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const buttonIconAbout = document.querySelectorAll('.two-about-button-icon');
 
-new Accordion('.accordion-container', {
-  duration: 1000,
+const aboutMeAcc = new Accordion('.accordion-container', {
+  duration: 700,
   showMultiple: true,
   collapse: true,
   openOnInit: [0],
 });
 
-//перезавантаження акордеону під час зміни маштабу
-window.addEventListener('resize', checkIfCoversInViewAbout);
-function checkIfCoversInViewAbout() {
-  buttonIconAbout.forEach(elem => {
-    if (elem.classList.contains('about-button-icon-rotate')) {
-      elem.classList.remove('about-button-icon-rotate');
-    }
-  });
-  acc.closeAll();
-}
 
 
 
-const swiper = new Swiper('.about-me-slider', {
-  modules: [Navigation, Keyboard, Mousewheel],
-  //стрілки
-  Navigation: {
-    nextEl: null,
-  },
 
-  slideToClickedSlide: true,
-
-  Keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-
-  Mousewheel: {
-    sensitivity: 1,
-  },
-
+const aboutMeSwiper = new Swiper('.about-me-slider', {
 
   //infinity scroll
   loop: true,
@@ -63,16 +37,13 @@ const swiper = new Swiper('.about-me-slider', {
 document.querySelector('.about-me-swiper-container').addEventListener('mouseover', function() {
   document.addEventListener('keydown', keyPressHandler);
 });
-
 document.querySelector('.about-me-swiper-container').addEventListener('focusin', function() {
   document.addEventListener('keydown', keyPressHandler);
 });
-
 // Видаляємо обробник події при знятті ховера або фокусу
 document.querySelector('.about-me-swiper-container').addEventListener('mouseout', function() {
   document.removeEventListener('keydown', keyPressHandler);
 });
-
 document.querySelector('.about-me-swiper-container').addEventListener('focusout', function() {
   document.removeEventListener('keydown', keyPressHandler);
 });
@@ -80,9 +51,9 @@ document.querySelector('.about-me-swiper-container').addEventListener('focusout'
 // Функція обробника події
 function keyPressHandler(event) {
   if (event.key === 'ArrowLeft') {
-    swiper.slidePrev();
+    aboutMeSwiper.slidePrev();
   } else if (event.key === 'ArrowRight') {
-    swiper.slideNext();
+    aboutMeSwiper.slideNext();
   }
 }
 
@@ -92,14 +63,14 @@ function keyPressHandler(event) {
 const nextButtonAbout = document.querySelector('.next-about-me-btn');
 
 nextButtonAbout.addEventListener('click', function () {
-  swiper.slideNext();
+  aboutMeSwiper.slideNext();
 });
 
 
 
 // Зміна бекграунду першого елемента
-swiper.on('slideNextTransitionStart', function () {
-  const nextSlide = swiper.slides[swiper.activeIndex];
+aboutMeSwiper.on('slideNextTransitionStart', function () {
+  const nextSlide = aboutMeSwiper.slides[aboutMeSwiper.activeIndex];
   const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
   // Змінюємо колір фону наступного слайда на червоний
@@ -118,8 +89,8 @@ swiper.on('slideNextTransitionStart', function () {
   });
 });
 
-swiper.on('slidePrevTransitionStart', function () {
-  const prevSlide = swiper.slides[swiper.activeIndex];
+aboutMeSwiper.on('slidePrevTransitionStart', function () {
+  const prevSlide = aboutMeSwiper.slides[aboutMeSwiper.activeIndex];
   const otherSlides = document.querySelectorAll('.about-me-slider-item');
 
   // Змінюємо колір фону попереднього слайда на червоний
