@@ -5,18 +5,10 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 const buttonIconAbout = document.querySelectorAll('.two-about-button-icon');
 
 new Accordion('.accordion-container', {
-  duration: 800,
+  duration: 1000,
   showMultiple: true,
   collapse: true,
   openOnInit: [0],
-  beforeOpen: currElement => {
-    const icon = currElement.querySelector('.two-about-button-icon');
-    icon.classList.add('two-about-button-icon-rotate');
-  },
-  beforeClose: currElement => {
-    const icon = currElement.querySelector('.two-about-button-icon');
-    icon.classList.remove('two-about-button-icon-rotate');
-  },
 });
 
 //перезавантаження акордеону під час зміни маштабу

@@ -3,10 +3,6 @@
 @import 'accordion-js/dist/accordion.min.css';
 
 
-about-me{
-  padding: 0;
-}
-
 .about-me-container {
   display: flex;
   flex-direction: column;
@@ -110,13 +106,11 @@ about-me{
 }
 
 .two-about-button-icon {
-  transition: transform 600ms linear;
+  transition: transform 1000ms linear;
 }
-.two-about-button-icon-rotate {
+
+.ac.accardeon-item.is-active .two-about-button-icon {
   transform: rotate(180deg);
-}
-.two-about-button-icon-rotate-off {
-  transform: rotate(0deg);
 }
 
 .accardeon-heading {
@@ -215,9 +209,9 @@ about-me{
 
 .next-about-me-btn {
   background-color: transparent;
-  border: none;
+  border: transparent;
   padding: 0;
-  outline: none;
+  outline: transparent;
 }
 
 .about-me-next-icon-btn {
