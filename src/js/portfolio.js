@@ -6,7 +6,7 @@ axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 // до функції підчеплюємо then/catch
 export function getPortfolioReviews() {
-    return axios.get('/review');
+    return axios.get('/reviews');
 }
 
 // до функції підчеплюємо then/catch
