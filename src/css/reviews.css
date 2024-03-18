@@ -51,7 +51,7 @@
 .prev-review-btn,
 .next-review-btn {
   background: transparent;
-  outline: none;
+  outline: transparent;
   border: 1px solid #fafafa80;
   border-radius: 60px;
   padding: 14px;
@@ -133,4 +133,25 @@
     padding-top: 82px;
     padding-bottom: 82px;
   }
+}
+
+
+/* POPUP SERVER ERROR */
+
+.popup-server-error {
+  position: fixed;
+  top: 20px;
+  right: clamp(20px, 5%, 10%);
+  background-color: var(--main-red); 
+  color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  z-index: 9999; 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup-server-error.active {
+  opacity: 1;
 }
