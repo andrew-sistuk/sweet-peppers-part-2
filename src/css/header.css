@@ -53,6 +53,10 @@
   color: inherit;
   cursor: pointer;
 }
+.header-menu-link-btn {
+  display: flex;
+  align-items: flex-start;
+}
 
 .header-menu-list {
   display: none;
@@ -110,6 +114,7 @@
   border: none;
   cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
   .header-menu-container {
     display: none;
