@@ -17,8 +17,6 @@
 }
 
 .faq-list .faq-item {
-  appearance: none;
-  -webkit-appearance: none;
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: solid 1px rgba(250, 250, 250, 0.2);
@@ -54,6 +52,7 @@
 }
 
 .faq-btn {
+  flex-shrink: 0;
   padding: 6px;
   width: 34px;
   height: 34px;
