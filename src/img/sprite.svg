@@ -36,5 +36,9 @@
 <symbol id="icon-menu-open" viewBox="0 0 64 32">
 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M4 5.111h56M4 26.889h56"></path>
 </symbol>
+<symbol id="icon-close" viewBox="0 0 22 22">
+<path d="M16.5 5.5L5.5 16.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.5 5.5L16.5 16.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </defs>
 </svg>
