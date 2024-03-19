@@ -47,6 +47,15 @@
   align-items: flex-start;
   flex-direction: row;
 }
+.header-menu {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+.header-menu-link-btn {
+  display: flex;
+  align-items: flex-start;
+}
 
 .header-menu-list {
   position: absolute;
