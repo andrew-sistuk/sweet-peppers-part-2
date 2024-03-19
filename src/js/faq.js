@@ -3,9 +3,17 @@ import 'accordion-js/dist/accordion.min.css';
 
 const acc = new Accordion('.faq-list', {
   duration: 700,
+  showMultiple: true,
 });
 
-//закриття accordion при виході секції за межі viewport
+//Закриття accordion при скролі секції за межі viewport
+document.addEventListener('scroll', checkIfFaqInView);
 const faqSection = document.querySelector('.faq');
 
-faqSection.addEventListener('mouseleave', acc.closeAll);
+function checkIfFaqInView() {
+  const bounding = faqSection.getBoundingClientRect();
+
+  if (bounding.bottom <= 0 || bounding.bottom >= bounding.height * 2) {
+    acc.closeAll();
+  }
+}
