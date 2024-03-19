@@ -1,27 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const openMenuButton = document.getElementById('open-menu');
-  const modal = document.querySelector('.overlay');
+const reft = {
+  openCloseMenuBtn: document.querySelector('[data-menu-open-close]'),
+  openMenuBtnModal: document.querySelector('[data-menu-open-modal]'),
+  closeMenuBtnModal: document.querySelector('[data-menu-close-modal]'),
+  closeMenuInList: document.querySelector('[data-menu-close-list]'),
+  closeMenuInOrder: document.querySelector('[data-menu-close-order]'),
+  menu: document.querySelector('[data-menu]'),
+  menuModal: document.querySelector('[data-menu-modal]'),
+};
 
-  function openModal() {
-    modal.classList.add('is-open');
+reft.openCloseMenuBtn.addEventListener('click', toggleMenu);
+reft.openMenuBtnModal.addEventListener('click', toggleModal);
+reft.closeMenuBtnModal.addEventListener('click', toggleModal);
+reft.closeMenuInOrder.addEventListener('click', toggleModal);
+
+reft.closeMenuInList.addEventListener('click', event => {
+  if (event.currentTarget != event.target) {
+    reft.menuModal.classList.toggle('visually-hidden');
   }
-
-  function closeModal(event) {
-    if (
-      event.target.closest('.modal-icon-container') ||
-      event.target.classList.contains('header-modal-menu-button')
-    ) {
-      modal.classList.remove('is-open');
-    }
-  }
-
-  const menuItems = document.querySelectorAll('.header-modal-menu-item');
-  menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-      modal.classList.remove('is-open');
-    });
-  });
-
-  openMenuButton.addEventListener('click', openModal);
-  document.addEventListener('click', closeModal);
 });
+
+function toggleMenu() {
+  reft.menu.classList.toggle('visually-hidden');
+}
+
+function toggleModal() {
+  reft.menuModal.classList.toggle('visually-hidden');
+}
