@@ -5,7 +5,14 @@ const acc = new Accordion('.accordion-container', {
   duration: 700,
 });
 
-//закриття accordion при виході секції за межі viewport
+//Закриття accordion при скролі секції за межі viewport
+document.addEventListener('scroll', checkIfFaqInView);
 const faqSection = document.querySelector('.faq');
 
-faqSection.addEventListener('mouseleave', acc.closeAll);
+function checkIfFaqInView() {
+  const bounding = faqSection.getBoundingClientRect();
+
+  if (bounding.bottom <= 0 || bounding.bottom >= bounding.height * 2) {
+    acc.closeAll();
+  }
+}
