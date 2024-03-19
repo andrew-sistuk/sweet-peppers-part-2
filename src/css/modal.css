@@ -24,7 +24,7 @@
   overflow: hidden;
   height: 100%;
   background-image: url('../img/modal-back.webp');
-  background-repeat: no-repeat;
+  background-size: cover;
   width: 375px;
   margin: 0 auto;
   position: relative;
