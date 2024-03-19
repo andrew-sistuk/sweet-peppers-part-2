@@ -10,6 +10,6 @@ function getPortfolioReviews() {
 }
 
 // до функції підчеплюємо then/catch
-function getPortfolioRequest(obj) {
+export function getPortfolioRequest(obj) {
   return axios.post('/requests', obj);
 }
