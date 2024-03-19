@@ -16,15 +16,89 @@
     <script type="module" crossorigin src="/sweet-peppers-part-2/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/sweet-peppers-part-2/assets/vendor-fca32f99.js">
     <link rel="stylesheet" href="/sweet-peppers-part-2/assets/vendor-8255b786.css">
-    <link rel="stylesheet" href="/sweet-peppers-part-2/assets/index-e85286cd.css">
+    <link rel="stylesheet" href="/sweet-peppers-part-2/assets/index-a7cf86a9.css">
   </head>
 
   <body>
     <header class="header">
-    <div class="container">
-        - Header
+  <div class="header-container container">
+    <div class="header-logo">
+      <a href="./index.html" class="header-logo-link">
+        <picture>
+          <source srcset="data:image/webp;base64,UklGRvIDAABXRUJQVlA4WAoAAAAQAAAATwAATwAAQUxQSLIAAAABcBRJktw0hGXggbJQBsIykRjIDGQGgjAQGsJC0H333xExAThspWMdH16jL4aLfRhfG35F5vhq+pnUjK9v0iGLUSDtgHGUSNtJHEVG2mpGmc2Gj0LzikoIwEepDoSWATaK/RQ1pVfThRpWNXX8e7mqqVQTXzW/oqaYGsOgJQDX4gCohACQlfgKrY4WmylUMG3BqIGGfaOCMBxN7fvahJPOdzHjQo/3DI6LrfRRn1bZFcNhVlA4IBoDAACQEACdASpQAFAAPp1KnUumLaomIpgM2LATiWUAy6gODZ4D9ZGSsLuo7ADek9w++4bo09gnmfzXexhl5tqmIqNf0tQc1KlSNVAXSWeUZQqSozCCatXgKU43RLsg09yb17lXDvvo724bDA4T678TfSCq8xsrNUFKfnVFGdOib/vCB3TuHoOw/jTmcCIGxgAA/vjACFiBWbPP2wOvXB/fcixTp06r+SndristyU5B2CDYcu5IGPF7+n+LWoX+lcSadjP1iWCSCjT+/NJDUPpK6oWCgAFjPxwc9j26qQPANnF3JADJUtXI1UMLThcga+HLgMr0Y9OdrdjmEYhszhzehpb8gSVXdxgAJcj1vtjZEXffPjhBOEXrSxxsuwIPT01QH5u03VtdsavvjJ+EM5Df6f67qfdtRbTYZHCyBpq+sckbflbffThKdaBVf5AF8Ooj34HoOLUpX6UWeJyJnLwNs2vMrCIer27nQZxOG+zxxuU7RY8pNOm5HcAoVHOx3iMVEd/RH+LF3eMd85l6lzTK/SAGQlpslYpdRUurPQw08ZVPU5OY7lKIcYTn+IMreJK6S3jBL9h0PDJ97zeN7jQw+aSJUNvnMEQ+FuJ6K00cFOU/bb25YS9KDQGH3KW1nAPrrR72Elx8y4F8E47/DupX7qK2Et8jp1fuzdozZFn1rv9+AbzCTKXGVxgzW3W9Upx/IZZS21PbD8DzgXQHHElhiXcuO1EFqr6tLtM7wzTS9ekSANeW46OJFv6ucjyiCQDTVYKGN8jXYmftZI22gTiDNLdi3hLIcwyT3rFZf9kG6Xz2jZnDJD6s8yFlhDulF+2l+GYD239MfbtQiPPidkAL1dvRjHIldQwhOcIwZOefegWgmghNdgRw7oMb9drJrV5Vs8Ml6p5XJMwnI//qV2HjdJ7hX3M53AKeNCIgk3YQuL8/4ymM5goS+LuLH58UPg/K25Q+/NbxHQEHmdhhMzmdA8nJmEjaDuGZ/G32ToLOS+eZQK+9Rf7yhVvQddYO32GTpIt0V2gfgA1zQAcwr5EhlzzJZN/domQOqwAAAA== , data:image/webp;base64,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 2x" />
+          <img
+            src="data:image/webp;base64,UklGRvIDAABXRUJQVlA4WAoAAAAQAAAATwAATwAAQUxQSLIAAAABcBRJktw0hGXggbJQBsIykRjIDGQGgjAQGsJC0H333xExAThspWMdH16jL4aLfRhfG35F5vhq+pnUjK9v0iGLUSDtgHGUSNtJHEVG2mpGmc2Gj0LzikoIwEepDoSWATaK/RQ1pVfThRpWNXX8e7mqqVQTXzW/oqaYGsOgJQDX4gCohACQlfgKrY4WmylUMG3BqIGGfaOCMBxN7fvahJPOdzHjQo/3DI6LrfRRn1bZFcNhVlA4IBoDAACQEACdASpQAFAAPp1KnUumLaomIpgM2LATiWUAy6gODZ4D9ZGSsLuo7ADek9w++4bo09gnmfzXexhl5tqmIqNf0tQc1KlSNVAXSWeUZQqSozCCatXgKU43RLsg09yb17lXDvvo724bDA4T678TfSCq8xsrNUFKfnVFGdOib/vCB3TuHoOw/jTmcCIGxgAA/vjACFiBWbPP2wOvXB/fcixTp06r+SndristyU5B2CDYcu5IGPF7+n+LWoX+lcSadjP1iWCSCjT+/NJDUPpK6oWCgAFjPxwc9j26qQPANnF3JADJUtXI1UMLThcga+HLgMr0Y9OdrdjmEYhszhzehpb8gSVXdxgAJcj1vtjZEXffPjhBOEXrSxxsuwIPT01QH5u03VtdsavvjJ+EM5Df6f67qfdtRbTYZHCyBpq+sckbflbffThKdaBVf5AF8Ooj34HoOLUpX6UWeJyJnLwNs2vMrCIer27nQZxOG+zxxuU7RY8pNOm5HcAoVHOx3iMVEd/RH+LF3eMd85l6lzTK/SAGQlpslYpdRUurPQw08ZVPU5OY7lKIcYTn+IMreJK6S3jBL9h0PDJ97zeN7jQw+aSJUNvnMEQ+FuJ6K00cFOU/bb25YS9KDQGH3KW1nAPrrR72Elx8y4F8E47/DupX7qK2Et8jp1fuzdozZFn1rv9+AbzCTKXGVxgzW3W9Upx/IZZS21PbD8DzgXQHHElhiXcuO1EFqr6tLtM7wzTS9ekSANeW46OJFv6ucjyiCQDTVYKGN8jXYmftZI22gTiDNLdi3hLIcwyT3rFZf9kG6Xz2jZnDJD6s8yFlhDulF+2l+GYD239MfbtQiPPidkAL1dvRjHIldQwhOcIwZOefegWgmghNdgRw7oMb9drJrV5Vs8Ml6p5XJMwnI//qV2HjdJ7hX3M53AKeNCIgk3YQuL8/4ymM5goS+LuLH58UPg/K25Q+/NbxHQEHmdhhMzmdA8nJmEjaDuGZ/G32ToLOS+eZQK+9Rf7yhVvQddYO32GTpIt0V2gfgA1zQAcwr5EhlzzJZN/domQOqwAAAA=="
+            alt="lloyd jefferson photo"
+            width="80"
+            height="80"
+          />
+        </picture>
+        <p class="header-logo-text header-text">jefferson*</p>
+      </a>
     </div>
+    <div class="header-menu-container menu-container">
+      <div class="header-list-container">
+        <button class="header-menu" data-menu-open-close>Menu</button>
+        <ul
+          class="header-menu-list header-text visually-hidden"
+          id="header-menu-list"
+          data-menu
+        >
+          <li class="header-menu-item header-text">
+            <a href="#about-me">About me</a>
+          </li>
+          <li class="header-menu-item header-text">
+            <a href="#benefits">Benefits</a>
+          </li>
+          <li class="header-menu-item header-text">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="header-menu-item header-text"><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <a class="header-order-btn" href="#footer">Order the project</a>
+    </div>
+
+    <button
+      class="header-btn button-reset header-menu-link-btn"
+      id="open-menu"
+      data-menu-open-modal
+    >
+      <svg class="header-menu-svg" width="28" height="28">
+        <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-menu-open"></use>
+      </svg>
+    </button>
+  </div>
 </header>
+<div class="overlay visually-hidden" id="modal" data-menu-modal>
+  <div class="modal-container">
+    <div class="modal-icon-container">
+      <button class="button-reset" id="close-menu" type="button" data-menu-close-modal>
+        <svg class="header-btn-icon" width="36" height="36">
+          <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-x-close"></use>
+        </svg>
+      </button>
+    </div>
+      <ul class="header-modal-menu-list" data-menu-close-list>
+        <li class="header-modal-menu-item header-text">
+          <a href="#about-me">About me</a>
+        </li>
+        <li class="header-modal-menu-item header-text">
+          <a href="#benefits">Benefits</a>
+        </li>
+        <li class="header-modal-menu-item header-text">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="header-modal-menu-item header-text">
+          <a href="#faq">FAQ</a>
+        </li>
+      </ul>
+      <a class="header-order-btn" href="#footer" data-menu-close-order>Order the project</a>
+  </div>
+</div>
+
+
 
     <main>
       <section class="hero-section">
@@ -108,7 +182,7 @@
               <h2 class="accardeon-heading">About me</h2>
               <div class="about-button-icon-cover">
                 <svg class="two-about-button-icon two-about-button-icon-rotate">
-                  <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+                  <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
                 </svg>
               </div>
             </div>
@@ -144,7 +218,7 @@
               <h2 class="accardeon-heading">ROLE</h2>
               <div class="about-button-icon-cover">
                 <svg class="two-about-button-icon">
-                  <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+                  <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
                 </svg>
               </div>
             </div>
@@ -162,7 +236,7 @@
               <h2 class="accardeon-heading">EDUCATION</h2>
               <div class="about-button-icon-cover">
                 <svg class="two-about-button-icon">
-                  <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+                  <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
                 </svg>
               </div>
             </div>
@@ -205,7 +279,7 @@
 
         <button class="next-about-me-btn">
           <svg class="about-me-next-icon-btn" width="28" height="28">
-            <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-narrow-right"></use>
+            <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
         </button>
       </div>
@@ -223,7 +297,7 @@
             <svg width="24" height="24">
               <use
                 class="benefits-icons"
-                href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-user"
+                href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-user"
               ></use>
             </svg>
           </div>
@@ -240,7 +314,7 @@
             <svg width="24" height="24">
               <use
                 class="benefits-icons"
-                href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-message-chat"
+                href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-message-chat"
               ></use>
             </svg>
           </div>
@@ -257,7 +331,7 @@
             <svg width="24" height="24">
               <use
                 class="benefits-icons"
-                href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-brush"
+                href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-brush"
               ></use>
             </svg>
           </div>
@@ -274,7 +348,7 @@
             <svg width="24" height="24">
               <use
                 class="benefits-icons"
-                href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-hourglass"
+                href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-hourglass"
               ></use>
             </svg>
           </div>
@@ -430,13 +504,13 @@
       <div class="projects-swipe-btns-wrapper">
         <button class="prev-project-btn swiper-button-prev">
           <svg class="prev-icon-btn" width="24" height="24">
-            <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-narrow-left"></use>
+            <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-left"></use>
           </svg>
         </button>
 
         <button class="next-project-btn swiper-button-next">
           <svg class="next-icon-btn" width="24" height="24">
-            <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-narrow-right"></use>
+            <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
         </button>
       </div>
@@ -456,7 +530,7 @@
           >
           <button class="faq-btn" type="button">
             <svg class="faq-btn-icon" width="20" height="20">
-              <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+              <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
         </h3>
@@ -473,7 +547,7 @@
           >
           <button class="faq-btn" type="button">
             <svg class="faq-btn-icon" width="20" height="20">
-              <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+              <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
         </h3>
@@ -492,7 +566,7 @@
           >
           <button class="faq-btn" type="button">
             <svg class="faq-btn-icon" width="20" height="20">
-              <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+              <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
         </h3>
@@ -507,7 +581,7 @@
           <span class="faq-item-title-text">How can I contact you?</span>
           <button class="faq-btn" type="button">
             <svg class="faq-btn-icon" width="20" height="20">
-              <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+              <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
         </h3>
@@ -523,7 +597,7 @@
             >Do you provide advice or support?</span
           ><button class="faq-btn" type="button">
             <svg class="faq-btn-icon" width="20" height="20">
-              <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+              <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
         </h3>
@@ -543,7 +617,7 @@
           >
           <button class="faq-btn" type="button">
             <svg class="faq-btn-icon" width="20" height="20">
-              <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-bottom"></use>
+              <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
         </h3>
@@ -838,12 +912,12 @@
       <div class="reviews-swipe-btns-wrapper">
         <button class="prev-review-btn swiper-button-prev">
           <svg class="prev-icon-btn" width="24" height="24">
-            <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-narrow-left"></use>
+            <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-left"></use>
           </svg>
         </button>
         <button class="next-review-btn swiper-button-next">
           <svg class="next-icon-btn" width="24" height="24">
-            <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-arrow-narrow-right"></use>
+            <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
         </button>
       </div>
@@ -911,7 +985,7 @@
     <div class="modal">
       <button class="modal-close-btn" type="button">
         <svg class="close-icon" width="22" height="22">
-          <use href="/sweet-peppers-part-2/assets/sprite-0db0a454.svg#icon-close"></use>
+          <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-close"></use>
         </svg>
       </button>
       <h3 class="modal-title"></h3>
@@ -920,7 +994,6 @@
   </div>
 </footer>
 
-    
     
   </body>
 </html>
