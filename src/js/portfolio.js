@@ -5,11 +5,11 @@ axios.defaults.headers.common['Accept'] = 'application/json';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 // до функції підчеплюємо then/catch
-function getPortfolioReviews() {
+export function getPortfolioReviews() {
     return axios.get('/reviews');
 }
 
 // до функції підчеплюємо then/catch
-function getPortfolioRequest(obj) {
+export function getPortfolioRequest(obj) {
   return axios.post('/requests', obj);
 }

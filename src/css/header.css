@@ -1,0 +1,136 @@
+.header {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.header-menu {
+  font-family: InterTight-Medium, sans-serif;
+  font-weight: 500;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  border: transparent;
+  outline: transparent;
+  background-color: transparent;
+  color: var(--main-white);
+}
+
+.header-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header-text {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--main-white);
+}
+
+.header-logo {
+  cursor: pointer;
+}
+
+.header-logo-link {
+  display: flex;
+  gap: 8px;
+}
+
+.header-menu-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.header-menu {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+.header-menu-link-btn {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-menu-list {
+  position: absolute;
+  left: 50%;
+  white-space: nowrap;
+  text-align: center;
+  transform: translateX(-50%);
+  margin-top: 15px;
+}
+
+.header-list-container {
+  position: relative;
+}
+
+.button-reset {
+  padding: 0;
+  background: transparent;
+  border: transparent;
+  outline: transparent;
+}
+
+.header-order-btn {
+  font-size: 16px;
+  padding: 18px 24px;
+  border-radius: 60px;
+  letter-spacing: -0.02em;
+  border: transparent;
+  background: var(--main-red);
+}
+
+@media screen and (max-width: 768px) {
+  .header-menu-container {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .header-order-btn {
+    font-size: 14px;
+    padding: 14px 31px;
+    border-radius: 60px;
+    letter-spacing: -0.02em;
+    border: transparent;
+    background: var(--main-red);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-link-btn {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .header-list-container {
+    margin-right: 164px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header-list-container {
+    margin-right: 500px;
+  }
+}
