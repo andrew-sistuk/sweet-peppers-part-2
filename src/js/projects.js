@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
-new Swiper('.swiper', {
+const projectsSwiper = new Swiper('.swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
   speed: 800,
   grabCursor: true,
