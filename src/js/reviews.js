@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import { getPortfolioReviews } from './portfolio.js';
 const reviewsList = document.querySelector('.reviews-list');
 
@@ -75,8 +75,8 @@ function showMessage(message) {
   setTimeout(popup.remove.bind(popup), 5000);
 }
 
-new Swiper('.swiper', {
-  modules: [Navigation, Keyboard, Mousewheel],
+const reviewsSwiper = new Swiper('.reviews-swiper', {
+  modules: [Navigation, Keyboard],
   speed: 800,
   grabCursor: true,
   allowTouchMove: true,
@@ -85,8 +85,8 @@ new Swiper('.swiper', {
   spaceBetween: 16,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.next-review-btn',
+    prevEl: '.prev-review-btn',
   },
 
   keyboard: {
