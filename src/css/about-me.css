@@ -163,7 +163,7 @@
   display: flex;
   flex-direction: row;
   gap: 55px;
-  padding-top: 32px;
+  margin-top: 32px;
 }
 
 .about-me-slider {
@@ -263,7 +263,7 @@
   .about-me-swiper-container {
     gap: 64px;
     width: 704px;
-    padding-top: 64px;
+    margin-top: 64px;
   }
   .about-me-slider {
     gap: 64px;
@@ -328,7 +328,7 @@
   .about-me-swiper-container {
     gap: 72px;
     width: 1312px;
-    padding-top: 96px;
+    margin-top: 96px;
   }
   .about-me-slider {
     gap: 72px;
