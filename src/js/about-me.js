@@ -1,6 +1,5 @@
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
-// import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const buttonIconAbout = document.querySelectorAll('.two-about-button-icon');
 
@@ -11,14 +10,12 @@ const aboutMeAcc = new Accordion('.about-accordion-container', {
   openOnInit: [0],
 });
 
-
-
-
-
 const aboutMeSwiper = new Swiper('.about-me-slider', {
-
   //infinity scroll
   loop: true,
+  speed: 800,
+  grabCursor: true,
+  allowTouchMove: true,
 
   breakpoints: {
     320: {
@@ -33,20 +30,27 @@ const aboutMeSwiper = new Swiper('.about-me-slider', {
   },
 });
 
-
-document.querySelector('.about-me-swiper-container').addEventListener('mouseover', function() {
-  document.addEventListener('keydown', keyPressHandler);
-});
-document.querySelector('.about-me-swiper-container').addEventListener('focusin', function() {
-  document.addEventListener('keydown', keyPressHandler);
-});
+document
+  .querySelector('.about-me-swiper-container')
+  .addEventListener('mouseover', function () {
+    document.addEventListener('keydown', keyPressHandler);
+  });
+document
+  .querySelector('.about-me-swiper-container')
+  .addEventListener('focusin', function () {
+    document.addEventListener('keydown', keyPressHandler);
+  });
 // Видаляємо обробник події при знятті ховера або фокусу
-document.querySelector('.about-me-swiper-container').addEventListener('mouseout', function() {
-  document.removeEventListener('keydown', keyPressHandler);
-});
-document.querySelector('.about-me-swiper-container').addEventListener('focusout', function() {
-  document.removeEventListener('keydown', keyPressHandler);
-});
+document
+  .querySelector('.about-me-swiper-container')
+  .addEventListener('mouseout', function () {
+    document.removeEventListener('keydown', keyPressHandler);
+  });
+document
+  .querySelector('.about-me-swiper-container')
+  .addEventListener('focusout', function () {
+    document.removeEventListener('keydown', keyPressHandler);
+  });
 
 // Функція обробника події
 function keyPressHandler(event) {
@@ -57,16 +61,12 @@ function keyPressHandler(event) {
   }
 }
 
-
-
 // підключення кнопки
 const nextButtonAbout = document.querySelector('.next-about-me-btn');
 
 nextButtonAbout.addEventListener('click', function () {
   aboutMeSwiper.slideNext();
 });
-
-
 
 // Зміна бекграунду першого елемента
 aboutMeSwiper.on('slideNextTransitionStart', function () {
@@ -108,7 +108,6 @@ aboutMeSwiper.on('slidePrevTransitionStart', function () {
     }
   });
 });
-
 
 // задаєм бекграунд першому елементу при завантаженні
 document.addEventListener('DOMContentLoaded', function () {

@@ -40,7 +40,7 @@
 .marquee__line {
   width: 282px;
   overflow: hidden;
-  transition: transform 250ms linear;
+  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
 }
 
@@ -197,7 +197,7 @@
   }
 
   .animations {
-    transition: transform 2500ms linear;
+    transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .animations:hover {
@@ -205,7 +205,7 @@
   }
 
   .animations {
-    transition: transform 2s linear;
+    transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .animations:hover {

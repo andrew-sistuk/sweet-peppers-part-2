@@ -7,6 +7,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
   grabCursor: true,
   allowTouchMove: true,
   direction: 'horizontal',
+  spaceBetween: 16,
 
   navigation: {
     nextEl: '.next-project-btn',

@@ -202,7 +202,7 @@ input:focus {
   top: 0;
   left: 0;
   opacity: 1;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.6);
 }
 
