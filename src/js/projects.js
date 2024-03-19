@@ -1,16 +1,16 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
-const projectsSwiper = new Swiper('.swiper', {
-  modules: [Navigation, Keyboard, Mousewheel],
+const projectsSwiper = new Swiper('.projects-swiper', {
+  modules: [Navigation, Keyboard],
   speed: 800,
   grabCursor: true,
   allowTouchMove: true,
   direction: 'horizontal',
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.next-project-btn',
+    prevEl: '.prev-project-btn',
   },
 
   keyboard: {
@@ -21,6 +21,6 @@ const projectsSwiper = new Swiper('.swiper', {
 
   mousewheel: {
     sensitivity: 1,
-    eventsTarget: '.swiper-wrapper',
+    eventsTarget: '.projects-list',
   },
 });
