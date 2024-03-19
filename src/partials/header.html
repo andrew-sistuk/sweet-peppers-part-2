@@ -1,5 +1,52 @@
 <header class="header">
-    <div class="container">
-        - Header
+  <div class="header-container container">
+    <div class="header-logo">
+      <a href="./index.html" class="header-logo-link">
+        <picture>
+          <source srcset="./img/main-logo.webp, ./img/main-logo@2x.webp 2x" />
+          <img
+            src="./img/main-logo.webp"
+            alt="lloyd jefferson photo"
+            width="80"
+            height="80"
+          />
+        </picture>
+        <p class="header-logo-text header-text">jefferson*</p>
+      </a>
     </div>
+    <div class="header-menu-container menu-container">
+      <div class="header-list-container">
+        <button class="header-menu" data-menu-open-close>Menu</button>
+        <ul
+          class="header-menu-list header-text visually-hidden"
+          id="header-menu-list"
+          data-menu
+        >
+          <li class="header-menu-item header-text">
+            <a href="#about-me">About me</a>
+          </li>
+          <li class="header-menu-item header-text">
+            <a href="#benefits">Benefits</a>
+          </li>
+          <li class="header-menu-item header-text">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="header-menu-item header-text"><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <a class="header-order-btn" href="#footer">Order the project</a>
+    </div>
+
+    <button
+      class="header-btn button-reset header-menu-link-btn"
+      id="open-menu"
+      data-menu-open-modal
+    >
+      <svg class="header-menu-svg" width="28" height="28">
+        <use href="./img/sprite.svg#icon-menu-open"></use>
+      </svg>
+    </button>
+  </div>
 </header>
+<load src="./modal.html" />
