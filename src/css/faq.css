@@ -34,7 +34,7 @@
 .faq-list .faq-item .faq-item-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
   padding: 0;
   font: inherit;
   font-weight: 600;
@@ -73,6 +73,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+  padding-top: 16px;
 }
 
 .is-active .faq-btn {
@@ -82,7 +83,7 @@
 @media screen and (min-width: 768px) {
   .faq {
     padding: 48px 0;
-    height: 851px;
+    height: 763px;
   }
 
   .faq-list .faq-item {
@@ -104,19 +105,39 @@
     max-width: 656px;
   }
 
-  .faq-list .faq-item .faq-item-title {
-    margin-bottom: 16px;
+  .faq-list .faq-item:last-child .faq-item-text {
+    padding-top: 8px;
+  }
+
+  .faq-list .faq-item:last-child .faq-item-title {
+    margin-bottom: 8px;
+  }
+
+  .faq-list .faq-item:last-child .faq-item-title-text {
+    width: 470px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .faq {
     padding: 82px 0;
-    height: 586px;
+    height: 544px;
   }
 
   .faq-list .faq-item {
     padding-bottom: 26px;
+  }
+
+  .faq-list .faq-item:last-child .faq-item-text {
+    padding-top: 20px;
+  }
+
+  .faq-list .faq-item:last-child .faq-item-title {
+    margin-bottom: 6px;
+  }
+
+  .faq-list .faq-item:nth-child(3) {
+    padding-bottom: 52px;
   }
 
   .faq-list {
@@ -138,10 +159,6 @@
 
   .faq-item:nth-child(3) {
     border-bottom: solid 1px rgba(250, 250, 250, 0.2);
-  }
-
-  .faq-item:nth-child(3) .faq-item-text {
-    margin-bottom: 20px;
   }
 
   .faq-item:nth-child(n + 4) {
