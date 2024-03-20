@@ -57,7 +57,7 @@
   padding: 14px;
   width: 52px;
   height: 52px;
-  transition: border 250ms linear;
+  transition: border 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prev-icon-btn,
@@ -65,7 +65,7 @@
   fill: transparent;
   stroke: #fafafa;
   stroke-width: 2px;
-  transition: stroke 250ms linear;
+  transition: stroke 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prev-review-btn:hover,
@@ -149,7 +149,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   z-index: 9999; 
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .popup-server-error.activate-popup-animation {

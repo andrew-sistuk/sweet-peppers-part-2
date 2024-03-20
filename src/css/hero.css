@@ -143,7 +143,7 @@ div.hero-container {
     animation-name: animation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    transition: background-image 1000ms linear;
+    transition: background-image 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .hero-sectio-one {

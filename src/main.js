@@ -1,4 +1,4 @@
-import './js/scroll.js';
+// import './js/scroll.js';
 import './js/portfolio.js';
 
 import './js/header.js';

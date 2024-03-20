@@ -5,7 +5,6 @@
   flex-direction: column;
   padding-top: 64px;
   min-width: 0;
-  width: 343px;
   padding-bottom: 32px;
 }
 
@@ -19,7 +18,7 @@
 .about-first-section-text-container {
   display: block;
   border-radius: 24px;
-  width: 343px;
+  width: 100%;
   padding: 32px 30px 270px 30px;
   background-color: var(--cards-black);
 }
@@ -41,7 +40,7 @@
 }
 
 .about-first-section-image {
-  width: 343px;
+  width: 100%;
 }
 
 /* Accordion */
@@ -97,7 +96,7 @@
 }
 
 .two-about-button-icon {
-  transition: transform 700ms linear;
+  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ac.accardeon-item.is-active .two-about-button-icon {
@@ -209,7 +208,8 @@
   fill: transparent;
   stroke: var(--arrow-gray);
   stroke-width: 2px;
-  transition: stroke 250ms linear;
+  transition: stroke 800ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .next-about-me-btn:hover .about-me-next-icon-btn,
 .next-about-me-btn:focus .about-me-next-icon-btn
@@ -221,13 +221,11 @@
 @media screen and (min-width: 768px) {
 
   .about-me-container {
-    width: 704px;
     padding-bottom: 48px;
   }
 
   /* IMG Section */
   .about-first-section-text-container {
-    width: 704px;
     padding: 64px 64px 435px 64px;
   }
   .about-first-section-text {
@@ -235,10 +233,6 @@
     width: 576px;
     line-height: 1.05;
   }
-  .about-first-section-image {
-    width: 704px;
-  }
-
 
   /* Accordion */
   .about-accordion-section {
@@ -262,16 +256,16 @@
   /* SWIPER */
   .about-me-swiper-container {
     gap: 64px;
-    width: 704px;
+    width: 100%;
     padding-top: 64px;
   }
   .about-me-slider {
     gap: 64px;
-    width: 600px;
+    width: 100%;
     gap: 64px;
   }
   .about-me-slider-container {
-    width: 400px;
+    width: 100%;
   }
 
   /* .swiper-slide, */
@@ -288,7 +282,6 @@
 
 @media screen and (min-width: 1440px) {
   .about-me-container {
-    width: 1376px;
     padding-bottom: 82px;
   }
 
@@ -303,7 +296,7 @@
     width: 552px;
   }
   .about-first-section-image {
-    width: 680px;
+    width: 100%;
   }
 
 
@@ -327,17 +320,15 @@
   /* SWIPER */
   .about-me-swiper-container {
     gap: 72px;
-    width: 1312px;
+    width: 100%;
     padding-top: 96px;
   }
   .about-me-slider {
     gap: 72px;
-    width: 1200px;
+    width: 100%;
     gap: 72px;
   }
-  .about-me-slider-container {
-    width: 1200px;
-  }
+
   .about-me-next-icon-btn {
     width: 40px;
   }
