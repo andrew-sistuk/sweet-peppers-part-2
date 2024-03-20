@@ -4,14 +4,13 @@ const covers = document.querySelector('.content');
 function checkIfCoversInView() {
   const windowHeight = window.innerHeight;
   elements.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
+    const elementTop = covers.getBoundingClientRect().top;
+    const elementBottom = covers.getBoundingClientRect().bottom;
 
     if (
       (elementTop >= 0 && elementTop <= windowHeight) ||
       (elementBottom >= 0 && elementBottom <= windowHeight)
     ) {
-      console.log('зона видимості');
       if (window.innerWidth < 1440) {
         element.classList.add('animations-mobile-tablet');
       }
