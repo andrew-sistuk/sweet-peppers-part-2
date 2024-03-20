@@ -3,7 +3,6 @@ import 'accordion-js/dist/accordion.min.css';
 
 const acc = new Accordion('.faq-list', {
   duration: 700,
-  showMultiple: true,
 });
 
 //Закриття accordion при скролі секції за межі viewport

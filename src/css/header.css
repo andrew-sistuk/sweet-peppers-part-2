@@ -83,10 +83,19 @@
   border-radius: 60px;
   letter-spacing: -0.02em;
   border: transparent;
-  background: var(--main-red);
+  background-color: var(--main-red);
 }
 
-@media screen and (max-width: 768px) {
+.header-order-btn:hover {
+  background-color: var(--main-red);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(46, 47, 66, 0.2),
+    rgba(46, 47, 66, 0.2)
+  );
+}
+
+@media screen and (max-width: 767px) {
   .header-menu-container {
     position: absolute;
     width: 1px;
