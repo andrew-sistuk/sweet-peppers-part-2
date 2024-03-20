@@ -6,6 +6,20 @@
   background-size: contain;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url(../img/hero@2x.webp);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero-section {
+    background-size: cover;
+  }
+}
+
 .hero-position-nav {
   /* width: 100%; */
   display: flex;
@@ -15,14 +29,6 @@
 
 .button-hero-anime {
   display: none;
-}
-
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: url(../img/hero@2x.webp);
-  }
 }
 
 div.hero-container {
@@ -141,7 +147,7 @@ div.hero-container {
   .hero-position-nav {
     width: 100%;
   }
-  
+
   .hero-section {
     background-image: url(../img/image-hero/image-hero-0.webp);
     animation-name: animation;
