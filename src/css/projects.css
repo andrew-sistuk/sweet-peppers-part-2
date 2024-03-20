@@ -57,19 +57,23 @@
   text-align: center;
   border-radius: 60px;
   padding: 16px 32px;
-
-  background: var(--main-red);
+  background-color: var(--main-red);
 }
 
 .project-link-btn:hover {
-  background: #e0373f;
+  background-color: var(--main-red);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(46, 47, 66, 0.2),
+    rgba(46, 47, 66, 0.2)
+  );
 }
 
 .project-image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 110px 16px;
+  padding: 120px 16px;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   background: var(--cards-black);
@@ -92,7 +96,7 @@
   padding: 14px;
   width: 52px;
   height: 52px;
-  transition: border 250ms linear;
+  transition: border 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prev-icon-btn,
@@ -100,7 +104,7 @@
   fill: transparent;
   stroke: #fafafa;
   stroke-width: 2px;
-  transition: stroke 250ms linear;
+  transition: stroke 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prev-project-btn:hover,
@@ -209,7 +213,7 @@
   }
 
   .project-image-wrapper {
-    padding: 120px 37px;
+    padding: 120px 34px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 24px;
     border-top-right-radius: 24px;
