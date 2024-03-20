@@ -8,11 +8,11 @@
 }
 
 @media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-.work {
-  background-image: url('../img/footer-background@2x.webp');
-}
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .work {
+    background-image: url('../img/footer-background@2x.webp');
+  }
 }
 
 .form-logo {
@@ -121,7 +121,12 @@ input:focus {
 
 .work-send-btn:hover,
 .work-send-btn:active {
-  background-color: #e0373f;
+  background-color: var(--main-red);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(46, 47, 66, 0.2),
+    rgba(46, 47, 66, 0.2)
+  );
 }
 
 .work-contacts {

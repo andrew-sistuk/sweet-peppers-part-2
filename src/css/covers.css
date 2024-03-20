@@ -134,6 +134,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .covers {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+
   .content {
     height: 960px;
   }
@@ -165,6 +170,11 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .covers {
+    padding-bottom: 82px;
+    padding-top: 82px;
+  }
+
   .content {
     width: 1440px;
     height: 960px;
