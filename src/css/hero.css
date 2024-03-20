@@ -7,7 +7,7 @@
 }
 
 .hero-position-nav {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-self: flex-end;
   justify-content: space-between;
@@ -138,6 +138,10 @@ div.hero-container {
 }
 
 @media screen and (min-width: 1440px) {
+  .hero-position-nav {
+    width: 100%;
+  }
+  
   .hero-section {
     background-image: url(../img/image-hero/image-hero-0.webp);
     animation-name: animation;
@@ -177,23 +181,6 @@ div.hero-container {
     }
   }
 
-  /* ////////////////////animation///////////////////////// */
-  /* @keyframes animation {
-    0% {
-      background-image: url(../img/image/0.webp);
-    }
-    25% {
-      background-image: url(../img/image/1.webp);
-    }
-
-    50% {
-      background-image: url(../img/image/2.webp);
-    }
-    75% {
-      background-image: url(../img/image/3.webp);
-    }
-  } */
-  /* //////////////////////////////////////////////////// */
   .button-hero-anime {
     box-sizing: border-box;
     width: 48px;
