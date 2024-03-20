@@ -25,7 +25,7 @@
   height: 100%;
   background-image: url('../img/modal-back.webp');
   background-size: cover;
-  width: 375px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   padding-top: 300px;

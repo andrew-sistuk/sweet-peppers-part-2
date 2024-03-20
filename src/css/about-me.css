@@ -29,7 +29,7 @@
   letter-spacing: -0.03em;
   text-align: left;
   text-transform: uppercase;
-  width: 283px;
+  max-width: 280px;
 }
 
 .about-first-section-text-sekond-color {
@@ -161,7 +161,7 @@
 .about-me-swiper-container {
   display: flex;
   flex-direction: row;
-  gap: 55px;
+  /* gap: 55px; */
   padding-top: 32px;
 }
 
@@ -201,6 +201,7 @@
   border: transparent;
   padding: 0;
   outline: transparent;
+  margin-left: auto;
 }
 
 .about-me-next-icon-btn {
@@ -230,7 +231,7 @@
   }
   .about-first-section-text {
     font-size: 38px;
-    width: 576px;
+    max-width: 576px;
     line-height: 1.05;
   }
 
@@ -292,9 +293,12 @@
   .about-first-section-text-container {
     width: 680px;
   }
+
   .about-first-section-text {
+    max-width: none;
     width: 552px;
   }
+
   .about-first-section-image {
     width: 100%;
   }
