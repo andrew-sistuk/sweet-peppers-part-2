@@ -6,7 +6,12 @@
   height: 100%;
   z-index: 9999;
   background: rgba(46, 47, 66, 0.4);
-  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  transition: transform var(--main-dur-func-transition);
+}
+
+.overlay.is-open {
+  transform: translateX(0);
 }
 
 .modal-list-container {

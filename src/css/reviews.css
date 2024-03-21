@@ -56,7 +56,7 @@
   background: transparent;
   outline: transparent;
   border: 1px solid #fafafa80;
-  transition: border 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--main-dur-func-transition);
 }
 
 .prev-icon-btn,
@@ -64,7 +64,7 @@
   stroke-width: 2px;
   fill: transparent;
   stroke: #fafafa;
-  transition: stroke 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke var(--main-dur-func-transition);
 }
 
 .prev-review-btn:hover,
@@ -143,7 +143,7 @@
   color: #fff; 
   background-color: var(--main-red); 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--main-dur-func-transition);
 }
 
 .popup-server-error.activate-popup-animation {

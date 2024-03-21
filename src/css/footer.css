@@ -208,7 +208,7 @@ input:focus {
   left: 0;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.6);
-  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--main-dur-func-transition);
 }
 
 @media screen and (min-width: 768px) {

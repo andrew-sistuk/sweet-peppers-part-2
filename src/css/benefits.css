@@ -70,7 +70,7 @@
   letter-spacing: -0.02em;
   border-radius: 60px;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  transition: border-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--main-dur-func-transition);
 }
 
 .benefits-btn:hover {

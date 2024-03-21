@@ -95,7 +95,7 @@
 }
 
 .two-about-button-icon {
-  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--main-dur-func-transition);
 }
 
 .ac.accardeon-item.is-active .two-about-button-icon {
@@ -202,7 +202,7 @@
   stroke-width: 2px;
   fill: transparent;
   stroke: var(--arrow-gray);
-  transition: stroke 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke var(--main-dur-func-transition);
 }
 .next-about-me-btn:hover .about-me-next-icon-btn,
 .next-about-me-btn:focus .about-me-next-icon-btn {

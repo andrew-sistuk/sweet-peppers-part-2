@@ -17,6 +17,7 @@
   border: transparent;
   outline: transparent;
   background-color: transparent;
+  margin-bottom: 15px;
   color: var(--main-white);
 }
 
@@ -44,8 +45,6 @@
 
 .header-menu {
   text-decoration: underline;
-  color: inherit;
-  cursor: pointer;
 }
 
 .header-menu-link-btn {
@@ -56,10 +55,15 @@
 .header-menu-list {
   position: absolute;
   left: 50%;
+  transform: scaleY(0) translateX(-50%);
+  transform-origin: top;
+  transition: transform var(--main-dur-func-transition);
+  overflow: hidden;
   white-space: nowrap;
   text-align: center;
-  transform: translateX(-50%);
-  margin-top: 15px;
+}
+.header-menu-list.is-open {
+  transform: scaleY(1) translateX(-50%);
 }
 
 .header-list-container {
@@ -100,6 +104,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: row;
+    /* overflow: hidden; */
   }
 
   .header-menu-link-btn {

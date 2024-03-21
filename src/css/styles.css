@@ -39,6 +39,8 @@
   color: var(--main-white);
   background-color: var(--backround-black);
 
+  --main-dur-func-transition: 800ms cubic-bezier(0.4, 0, 0.2, 1);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
