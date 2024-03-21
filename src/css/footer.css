@@ -53,6 +53,7 @@
   background-color: transparent;
   color: rgba(250, 250, 250);
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  transition: border-bottom var(--main-dur-func-transition);
 }
 
 .work-form-input.succes {
@@ -142,6 +143,7 @@ input:focus {
   font-size: 14px;
   letter-spacing: -0.02em;
   border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: border var(--main-dur-func-transition);
 }
 
 .contact-link:hover,
