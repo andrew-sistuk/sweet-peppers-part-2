@@ -281,7 +281,7 @@ input:focus {
 
 @media screen and (min-width: 1440px) {
   .work {
-    padding: 164px 0 169px 0;
+    padding: 125px 0 170px 0;
     background-image: url('../img/footer-background-desktop.webp');
     background-size: 400px 700px;
     background-position: right bottom;
