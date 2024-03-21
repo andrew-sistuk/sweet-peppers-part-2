@@ -1,5 +1,21 @@
 @import 'swiper/css';
 
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #88888811;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
 .reviews {
   padding-top: 32px;
   padding-bottom: 64px;
@@ -16,11 +32,13 @@
 .reviews-list {
   margin-bottom: 32px;
 }
+
 .reviews-list-item {
   border-radius: 20px;
   padding: 32px 24px;
-  height: 355px;
+  height: 305px;
   border: 1px solid rgba(250, 250, 250, 0.2);
+  overflow: auto;
 }
 
 .review-photo {
@@ -101,6 +119,12 @@
   stroke: #fafafa33;
 }
 
+@media screen and (max-width: 375px) {
+  .reviews-list-item {
+    height: 330px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .reviews {
     padding-top: 48px;
@@ -136,13 +160,13 @@
   position: fixed;
   top: 20px;
   right: clamp(20px, 5%, 10%);
-  padding: 10px 20px; 
-  border-radius: 5px; 
-  z-index: 9999; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
   opacity: 0;
-  color: #fff; 
-  background-color: var(--main-red); 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  color: #fff;
+  background-color: var(--main-red);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: opacity var(--main-dur-func-transition);
 }
 

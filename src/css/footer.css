@@ -11,7 +11,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .work {
-    background-image: url('../img/footer-backgraund-mobile_2x.webp');
+    background-image: url('../img/footer-background-mobile_2x.webp');
   }
 }
 
