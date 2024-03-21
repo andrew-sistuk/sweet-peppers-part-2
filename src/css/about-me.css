@@ -187,6 +187,7 @@
   letter-spacing: -0.02em;
   text-align: left;
   border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: background-color var(--main-dur-func-transition);
 }
 
 .next-about-me-btn {
