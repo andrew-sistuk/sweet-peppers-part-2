@@ -16,7 +16,7 @@
     <script type="module" crossorigin src="/sweet-peppers-part-2/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/sweet-peppers-part-2/assets/vendor-fca32f99.js">
     <link rel="stylesheet" href="/sweet-peppers-part-2/assets/vendor-8255b786.css">
-    <link rel="stylesheet" href="/sweet-peppers-part-2/assets/index-c0d23bab.css">
+    <link rel="stylesheet" href="/sweet-peppers-part-2/assets/index-c4cc2bec.css">
   </head>
 
   <body>
@@ -66,6 +66,7 @@
       class="header-btn button-reset header-menu-link-btn"
       id="open-menu"
       type="button"
+      aria-label="open menu"
       data-menu-open-modal
     >
       <svg class="header-menu-svg" width="28" height="28">
@@ -260,7 +261,7 @@
           </ul>
         </div>
 
-        <button class="next-about-me-btn">
+        <button class="next-about-me-btn" aria-label="next skill">
           <svg class="about-me-next-icon-btn" width="28" height="28">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
@@ -485,13 +486,13 @@
         </li>
       </ul>
       <div class="projects-swipe-btns-wrapper">
-        <button class="prev-project-btn swiper-button-prev">
+        <button class="prev-project-btn swiper-button-prev" aria-label="previous project">
           <svg class="prev-icon-btn" width="24" height="24">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-left"></use>
           </svg>
         </button>
 
-        <button class="next-project-btn swiper-button-next">
+        <button class="next-project-btn swiper-button-next" aria-label="next project">
           <svg class="next-icon-btn" width="24" height="24">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
@@ -511,7 +512,7 @@
             What programming languages ​​are most often used in your
             project?</span
           >
-          <button class="faq-btn" type="button">
+          <button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
@@ -530,7 +531,7 @@
           <span class="faq-item-title-text">
             What are the deadlines for the project?</span
           >
-          <button class="faq-btn" type="button">
+          <button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
@@ -551,7 +552,7 @@
           <span class="faq-item-title-text">
             What payment methods do you accept?</span
           >
-          <button class="faq-btn" type="button">
+          <button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
@@ -568,7 +569,7 @@
       <li class="faq-item ac">
         <h3 class="faq-item-title ac-header ac-trigger">
           <span class="faq-item-title-text">How can I contact you?</span>
-          <button class="faq-btn" type="button">
+          <button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
@@ -586,7 +587,7 @@
         <h3 class="faq-item-title ac-header ac-trigger">
           <span class="faq-item-title-text"
             >Do you provide advice or support?</span
-          ><button class="faq-btn" type="button">
+          ><button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
@@ -608,7 +609,7 @@
             What does the process of developing a software product look like
             from idea to implementation?</span
           >
-          <button class="faq-btn" type="button">
+          <button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
@@ -905,12 +906,12 @@
     <div class="reviews-swiper swiper">
       <ul class="reviews-list swiper-wrapper"></ul>
       <div class="reviews-swipe-btns-wrapper">
-        <button class="prev-review-btn swiper-button-prev">
+        <button class="prev-review-btn swiper-button-prev" aria-label="previous review">
           <svg class="prev-icon-btn" width="24" height="24">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-left"></use>
           </svg>
         </button>
-        <button class="next-review-btn swiper-button-next">
+        <button class="next-review-btn swiper-button-next" aria-label="next review">
           <svg class="next-icon-btn" width="24" height="24">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
@@ -965,7 +966,7 @@
         autocomplete="off"
         required
       />
-      <button class="work-send-btn" type="submit">Send</button>
+      <button class="work-send-btn" type="submit" aria-label="send mail">Send</button>
     </form>
 
     <address class="work-contacts">
@@ -978,7 +979,7 @@
 
   <div class="backdrop visually-hidden">
     <div class="modal">
-      <button class="modal-close-btn" type="button">
+      <button class="modal-close-btn" type="button" aria-label="close thanx window">
         <svg class="close-icon" width="22" height="22">
           <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-close"></use>
         </svg>
@@ -992,7 +993,7 @@
     <div class="overlay is-open-modal" id="modal" data-menu-modal>
   <div class="modal-container">
     <div class="modal-icon-container">
-      <button class="button-reset" id="close-menu" type="button" data-menu-close-modal>
+      <button class="button-reset" id="close-menu" type="button" aria-label="close window" data-menu-close-modal>
         <svg class="header-btn-icon" width="36" height="36">
           <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-x-close"></use>
         </svg>
