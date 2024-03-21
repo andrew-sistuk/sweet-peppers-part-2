@@ -41,20 +41,9 @@ function renderReviews(reviews, reviewList, ok) {
       .join('');
 
     reviewList.insertAdjacentHTML('beforeend', reviewHTML);
-    reviewHeightCorrector();
   } else {
     reviewList.insertAdjacentHTML('beforeend', `<h3>Not found :(</h3>`);
   }
-}
-
-function reviewHeightCorrector() {
-  let elements = document.querySelectorAll('.reviews-list-item');
-
-  let maxHeight = Math.max(...Array.from(elements, el => el.clientHeight));
-
-  elements.forEach(element => {
-    element.style.height = maxHeight + 'px';
-  });
 }
 
 function showMessage(message) {
