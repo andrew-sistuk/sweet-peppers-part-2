@@ -1,10 +1,10 @@
-<section id="about-me">
+<section id="about-me" aria-label="about me section">
   <div class="container">
-    <h1 style="display: none">About Me</h1>
+    <h1 style="display: none" aria-label="about me title">About Me</h1>
     <div class="about-me-container">
       <div class="about-me-first-section-container">
         <div class="about-first-section-text-container">
-          <p class="about-first-section-text">
+          <p class="about-first-section-text" aria-label="short info about me">
             I work with people all over the world to create impressive and
             <span class="about-first-section-text-sekond-color"
               >functional</span
@@ -25,16 +25,24 @@
           "
           sizes="(min-width: 1440px) 680px, (min-width: 768px) 704px, (max-width: 767px) 343px"
           src="./img/image.webp"
-          alt="men with laptop"
+          alt="Lloyd Jefferson with laptop"
         />
       </div>
 
       <div class="about-accordion-section">
-        <ul class="accordion-container about-accordion-container">
-          <li class="ac accardeon-item">
+        <ul
+          class="accordion-container about-accordion-container"
+          aria-label="full information about me"
+        >
+          <li class="ac accardeon-item" aria-label="who i am">
             <div class="ac-trigger about-ac-trigger">
               <h2 class="accardeon-heading">About me</h2>
-              <div class="about-button-icon-cover">
+              <div
+                class="about-button-icon-cover"
+                aria-label="show more button"
+                role="button"
+                tabindex="0"
+              >
                 <svg class="two-about-button-icon two-about-button-icon-rotate">
                   <use href="./img/sprite.svg#icon-arrow-bottom"></use>
                 </svg>
@@ -67,10 +75,15 @@
             </div>
           </li>
 
-          <li class="ac accardeon-item">
+          <li class="ac accardeon-item" aria-label="my role">
             <div class="ac-trigger about-ac-trigger">
               <h2 class="accardeon-heading">ROLE</h2>
-              <div class="about-button-icon-cover">
+              <div
+                class="about-button-icon-cover"
+                aria-label="show more button"
+                role="button"
+                tabindex="0"
+              >
                 <svg class="two-about-button-icon">
                   <use href="./img/sprite.svg#icon-arrow-bottom"></use>
                 </svg>
@@ -85,10 +98,15 @@
             </div>
           </li>
 
-          <li class="ac accardeon-item">
+          <li class="ac accardeon-item" aria-label="my education">
             <div class="ac-trigger about-ac-trigger">
               <h2 class="accardeon-heading">EDUCATION</h2>
-              <div class="about-button-icon-cover">
+              <div
+                class="about-button-icon-cover"
+                aria-label="show more button"
+                role="button"
+                tabindex="0"
+              >
                 <svg class="two-about-button-icon">
                   <use href="./img/sprite.svg#icon-arrow-bottom"></use>
                 </svg>
@@ -115,19 +133,47 @@
 
       <div class="about-me-swiper-container">
         <div class="about-me-slider swiper-container">
-          <ul class="about-me-slider-container swiper-wrapper">
-            <li class="about-me-slider-item swiper-slide">HTML/CSS</li>
-            <li class="about-me-slider-item swiper-slide">JavaScript</li>
-            <li class="about-me-slider-item swiper-slide">React</li>
-            <li class="about-me-slider-item swiper-slide">Node. js</li>
-            <li class="about-me-slider-item swiper-slide">React Native</li>
-            <li class="about-me-slider-item swiper-slide">Soft skills</li>
-            <li class="about-me-slider-item swiper-slide">HTML/CSS</li>
-            <li class="about-me-slider-item swiper-slide">JavaScript</li>
-            <li class="about-me-slider-item swiper-slide">React</li>
-            <li class="about-me-slider-item swiper-slide">Node. js</li>
-            <li class="about-me-slider-item swiper-slide">React Native</li>
-            <li class="about-me-slider-item swiper-slide">Soft skills</li>
+          <ul
+            class="about-me-slider-container swiper-wrapper"
+            role="slider"
+            aria-label="my skills"
+          >
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              HTML/CSS
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              JavaScript
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              React
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              Node. js
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              React Native
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              Soft skills
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              HTML/CSS
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              JavaScript
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              React
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              Node. js
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              React Native
+            </li>
+            <li class="about-me-slider-item swiper-slide" tabindex="0">
+              Soft skills
+            </li>
           </ul>
         </div>
 

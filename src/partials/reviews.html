@@ -1,15 +1,25 @@
-<section class="reviews" id="reviews">
+<section class="reviews" id="reviews" aria-label="reviews section">
   <div class="container">
     <h2 class="reviews-section-title">Reviews</h2>
     <div class="reviews-swiper swiper">
-      <ul class="reviews-list swiper-wrapper"></ul>
+      <ul
+        class="reviews-list swiper-wrapper"
+        role="listbox"
+        aria-label="reviews list"
+      ></ul>
       <div class="reviews-swipe-btns-wrapper">
-        <button class="prev-review-btn swiper-button-prev" aria-label="previous review">
+        <button
+          class="prev-review-btn swiper-button-prev"
+          aria-label="previous review"
+        >
           <svg class="prev-icon-btn" width="24" height="24">
             <use href="./img/sprite.svg#icon-arrow-narrow-left"></use>
           </svg>
         </button>
-        <button class="next-review-btn swiper-button-next" aria-label="next review">
+        <button
+          class="next-review-btn swiper-button-next"
+          aria-label="next review"
+        >
           <svg class="next-icon-btn" width="24" height="24">
             <use href="./img/sprite.svg#icon-arrow-narrow-right"></use>
           </svg>
