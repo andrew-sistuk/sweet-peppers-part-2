@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" aria-label="navigation section" role="navigation">
   <div class="header-container container">
     <div class="header-logo">
       <a href="./index.html" class="header-logo-link">
@@ -22,6 +22,8 @@
         <ul
           class="header-menu-list header-text"
           id="header-menu-list"
+          role="menu"
+          aria-label="open menu button"
           data-menu
         >
           <li class="header-menu-item header-text">
@@ -37,7 +39,13 @@
         </ul>
       </div>
 
-      <a class="header-order-btn" href="#footer">Order the project</a>
+      <a
+        class="header-order-btn"
+        href="#footer"
+        role="button"
+        aria-label="order the project button"
+        >Order the project</a
+      >
     </div>
 
     <button

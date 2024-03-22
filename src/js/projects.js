@@ -8,6 +8,7 @@ const projectsSwiper = new Swiper('.projects-swiper', {
   allowTouchMove: true,
   direction: 'horizontal',
   spaceBetween: 16,
+  centeredSlides: true,
 
   navigation: {
     nextEl: '.next-project-btn',
@@ -18,10 +19,5 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
-  },
-
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: '.projects-list',
   },
 });

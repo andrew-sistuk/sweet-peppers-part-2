@@ -36,9 +36,7 @@
 .reviews-list-item {
   border-radius: 20px;
   padding: 32px 24px;
-  height: 305px;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  overflow: auto;
 }
 
 .review-photo {
@@ -53,6 +51,12 @@
   letter-spacing: -0.02em;
   color: var(--main-white);
 }
+
+.review-text-container {
+  overflow-y: scroll;
+  height: 120px;
+}
+
 .review-text {
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -117,12 +121,6 @@
 .prev-review-btn:disabled:hover .prev-icon-btn,
 .next-review-btn:disabled:hover .next-icon-btn {
   stroke: #fafafa33;
-}
-
-@media screen and (max-width: 375px) {
-  .reviews-list-item {
-    height: 330px;
-  }
 }
 
 @media screen and (min-width: 768px) {

@@ -34,8 +34,11 @@ function renderReviews(reviews, reviewList, ok) {
                 loading="lazy"
               />
           </picture>
-          <h3 class="review-author">${author}</h3>
-          <p class="review-text">${review}</p>
+          <h3 class="review-author" aria-label="reviews author name">${author}</h3>
+          <div class="review-text-container">
+            <p class="review-text" aria-label="review text">${review}</p>
+          </div>
+          
       </li>`
       )
       .join('');
