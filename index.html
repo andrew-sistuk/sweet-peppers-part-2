@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <header class="header" aria-label="navigation section" role="navigation">
+    <header class="header" aria-label="navigation section">
   <div class="header-container container">
     <div class="header-logo">
       <a href="./index.html" class="header-logo-link">
@@ -45,17 +45,16 @@
         <ul
           class="header-menu-list header-text"
           id="header-menu-list"
-          role="menu"
           aria-label="open menu button"
           data-menu
         >
-          <li class="header-menu-item header-text">
+          <li class="header-menu-item header-text" aria-label="section link">
             <a href="#about-me">About me</a>
           </li>
-          <li class="header-menu-item header-text">
+          <li class="header-menu-item header-text" aria-label="section link">
             <a href="#benefits">Benefits</a>
           </li>
-          <li class="header-menu-item header-text">
+          <li class="header-menu-item header-text" aria-label="section link">
             <a href="#projects">Projects</a>
           </li>
           <li class="header-menu-item header-text"><a href="#faq">FAQ</a></li>
@@ -95,12 +94,16 @@
     </h1>
 
     <div class="hero-position-nav">
-      <button class="button-hero-anime" type="button" aria-label="shift main color">
+      <button
+        class="button-hero-anime"
+        type="button"
+        aria-label="shift main color"
+      >
         <span class="hero-button hero-button-def">R</span
         ><span class="hero-button">G</span><span class="hero-button">B</span>
       </button>
       <ul class="soc-networks" aria-label="social media list">
-        <li aria-label="instagram" role="button">
+        <li aria-label="instagram">
           <a
             class="soc-networks-items instagram-link"
             href="https://www.instagram.com/goitclub/"
@@ -108,7 +111,7 @@
             >IG</a
           >
         </li>
-        <li aria-label="Facebook" role="button">
+        <li aria-label="Facebook">
           <a
             class="soc-networks-items facebook-link"
             href="https://www.facebook.com/goITclub/"
@@ -116,7 +119,7 @@
             >FB</a
           >
         </li>
-        <li aria-label="Youtube" role="button">
+        <li aria-label="Youtube">
           <a
             class="soc-networks-items youtube-link"
             href="https://www.youtube.com/c/GoIT"
@@ -124,7 +127,7 @@
             >YT</a
           >
         </li>
-        <li aria-label="Github" role="button">
+        <li aria-label="Github">
           <a
             class="soc-networks-items git-hub"
             href="https://github.com/AWoLf98/sweet-peppers-part-2"
@@ -132,7 +135,7 @@
             >GH</a
           >
         </li>
-        <li aria-label="email" role="button">
+        <li aria-label="email">
           <a
             class="soc-networks-items email-link"
             href="mailto:lloydjefferson@gmail.com"
@@ -274,7 +277,7 @@
         <div class="about-me-slider swiper-container">
           <ul
             class="about-me-slider-container swiper-wrapper"
-            role="slider"
+            
             aria-label="my skills"
           >
             <li class="about-me-slider-item swiper-slide" tabindex="0">
@@ -416,10 +419,13 @@
     <h2 class="projects-section-title">Projects</h2>
 
     <div class="projects-swiper swiper">
-      <ul class="projects-list swiper-wrapper" role="slider" aria-label="my projects slider">
-        <li class="projects-list-item swiper-slide">
+      <ul class="projects-list swiper-wrapper" aria-label="my projects slider">
+        <li class="projects-list-item swiper-slide" aria-label="project">
           <div class="project-information-wrapper">
-            <ul class="project-tehnologies-list" aria-label="technologies which i was used">
+            <ul
+              class="project-tehnologies-list"
+              aria-label="technologies which i was used"
+            >
               <li class="project-tehnologies-item">#html5</li>
               <li class="project-tehnologies-item">#css</li>
               <li class="project-tehnologies-item">#js</li>
@@ -460,9 +466,12 @@
           </div>
         </li>
 
-        <li class="projects-list-item swiper-slide">
+        <li class="projects-list-item swiper-slide" aria-label="project">
           <div class="project-information-wrapper">
-            <ul class="project-tehnologies-list" aria-label="technologies which i was used" >
+            <ul
+              class="project-tehnologies-list"
+              aria-label="technologies which i was used"
+            >
               <li class="project-tehnologies-item">#html5</li>
               <li class="project-tehnologies-item">#css</li>
               <li class="project-tehnologies-item">#js</li>
@@ -503,9 +512,12 @@
           </div>
         </li>
 
-        <li class="projects-list-item swiper-slide">
+        <li class="projects-list-item swiper-slide" aria-label="project">
           <div class="project-information-wrapper">
-            <ul class="project-tehnologies-list" aria-label="technologies which i was used">
+            <ul
+              class="project-tehnologies-list"
+              aria-label="technologies which i was used"
+            >
               <li class="project-tehnologies-item">#html5</li>
               <li class="project-tehnologies-item">#css</li>
               <li class="project-tehnologies-item">#js</li>
@@ -547,13 +559,19 @@
         </li>
       </ul>
       <div class="projects-swipe-btns-wrapper">
-        <button class="prev-project-btn swiper-button-prev" aria-label="previous project">
+        <button
+          class="prev-project-btn swiper-button-prev"
+          aria-label="previous project"
+        >
           <svg class="prev-icon-btn" width="24" height="24">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-left"></use>
           </svg>
         </button>
 
-        <button class="next-project-btn swiper-button-next" aria-label="next project">
+        <button
+          class="next-project-btn swiper-button-next"
+          aria-label="next project"
+        >
           <svg class="next-icon-btn" width="24" height="24">
             <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-narrow-right"></use>
           </svg>
@@ -566,11 +584,11 @@
       <section class="faq" id="faq" aria-label="faq section">
   <div class="container">
     <h2 class="faq-title">FAQ</h2>
-    <ul class="faq-list accordion-container" role="listbox" aria-label="faq list">
-      <li class="faq-item ac">
-        <h3 class="faq-item-title ac-header ac-trigger">
+    <ul class="faq-list accordion-container" aria-label="faq list">
+      <li class="faq-item ac" aria-label="question and answer">
+        <h3 class="faq-item-title ac-header ac-trigger" aria-label="title of question">
           <span class="faq-item-title-text">
-            What programming languages ​​are most often used in your
+            What programming languages are most often used in your
             project?</span
           >
           <button class="faq-btn" type="button" aria-label="show more">
@@ -587,8 +605,8 @@
           </p>
         </div>
       </li>
-      <li class="faq-item ac">
-        <h3 class="faq-item-title ac-header ac-trigger">
+      <li class="faq-item ac" aria-label="question and answer">
+        <div><h3 class="faq-item-title ac-header ac-trigger" aria-label="title of question">
           <span class="faq-item-title-text">
             What are the deadlines for the project?</span
           >
@@ -597,7 +615,7 @@
               <use href="/sweet-peppers-part-2/assets/sprite-72f5c631.svg#icon-arrow-bottom"></use>
             </svg>
           </button>
-        </h3>
+        </h3></div>
         <div class="ac-panel">
           <p class="faq-item-text" aria-label="answer">
             The terms of project implementation depend to a large extent on a
@@ -608,8 +626,8 @@
           </p>
         </div>
       </li>
-      <li class="faq-item ac">
-        <h3 class="faq-item-title ac-header ac-trigger">
+      <li class="faq-item ac" aria-label="question and answer">
+        <h3 class="faq-item-title ac-header ac-trigger" aria-label="title of question">
           <span class="faq-item-title-text">
             What payment methods do you accept?</span
           >
@@ -627,8 +645,8 @@
           </p>
         </div>
       </li>
-      <li class="faq-item ac">
-        <h3 class="faq-item-title ac-header ac-trigger">
+      <li class="faq-item ac" aria-label="question and answer">
+        <h3 class="faq-item-title ac-header ac-trigger" aria-label="title of question">
           <span class="faq-item-title-text">How can I contact you?</span>
           <button class="faq-btn" type="button" aria-label="show more">
             <svg class="faq-btn-icon" width="20" height="20">
@@ -644,8 +662,8 @@
           </p>
         </div>
       </li>
-      <li class="faq-item ac">
-        <h3 class="faq-item-title ac-header ac-trigger">
+      <li class="faq-item ac" aria-label="question and answer">
+        <h3 class="faq-item-title ac-header ac-trigger" aria-label="title of question">
           <span class="faq-item-title-text"
             >Do you provide advice or support?</span
           ><button class="faq-btn" type="button" aria-label="show more">
@@ -664,8 +682,8 @@
           </p>
         </div>
       </li>
-      <li class="faq-item ac">
-        <h3 class="faq-item-title ac-header ac-trigger">
+      <li class="faq-item ac" aria-label="question and answer">
+        <h3 class="faq-item-title ac-header ac-trigger" aria-label="title of question">
           <span class="faq-item-title-text">
             What does the process of developing a software product look like
             from idea to implementation?</span
@@ -693,8 +711,8 @@
     <h2 class="visually-hidden">Covers</h2>
     <div class="content">
       <div class="marquee">
-        <ul class="list-covers" role="listbox" aria-label="projects list">
-          <li class="list-element-covers animations">
+        <ul class="list-covers" aria-label="projects list">
+          <li class="list-element-covers animations" aria-label="project item">
             <a
               target="_blank"
               class="marquee__line"
@@ -747,7 +765,7 @@
             </a>
           </li>
 
-          <li class="list-element-covers animations relet">
+          <li class="list-element-covers animations relet" aria-label="project item">
             <a
               target="_blank"
               class="marquee__line"
@@ -816,7 +834,7 @@
             </a>
           </li>
 
-          <li class="list-element-covers animations">
+          <li class="list-element-covers animations" aria-label="project item">
             <a
               target="_blank"
               class="marquee__line"
@@ -886,7 +904,7 @@
             </a>
           </li>
 
-          <li class="list-element-covers animations relet">
+          <li class="list-element-covers animations relet" aria-label="project item">
             <a
               target="_blank"
               class="marquee__line"
@@ -967,7 +985,6 @@
     <div class="reviews-swiper swiper">
       <ul
         class="reviews-list swiper-wrapper"
-        role="listbox"
         aria-label="reviews list"
       ></ul>
       <div class="reviews-swipe-btns-wrapper">
@@ -1091,7 +1108,7 @@
   </div>
 </footer>
 
-    <div class="overlay is-open-modal" id="modal" role="menu" aria-label="modal menu window" data-menu-modal> 
+    <div class="overlay is-open-modal" id="modal" aria-label="modal menu" data-menu-modal> 
   <div class="modal-container">
     <div class="modal-icon-container">
       <button class="button-reset" id="close-menu" type="button" aria-label="close window" data-menu-close-modal>
@@ -1100,21 +1117,21 @@
         </svg>
       </button>
     </div>
-      <ul class="header-modal-menu-list" role="listbox" aria-label="go to section links" data-menu-close-list>
-        <li class="header-modal-menu-item header-text">
+      <ul class="header-modal-menu-list" role="list" aria-label="go to section links" data-menu-close-list>
+        <li class="header-modal-menu-item header-text" role="listitem">
           <a href="#about-me">About me</a>
         </li>
-        <li class="header-modal-menu-item header-text">
+        <li class="header-modal-menu-item header-text" role="listitem">
           <a href="#benefits">Benefits</a>
         </li>
-        <li class="header-modal-menu-item header-text">
+        <li class="header-modal-menu-item header-text" role="listitem">
           <a href="#projects">Projects</a>
         </li>
-        <li class="header-modal-menu-item header-text">
+        <li class="header-modal-menu-item header-text" role="listitem">
           <a href="#faq">FAQ</a>
         </li>
       </ul>
-      <a class="header-order-btn" href="#footer" data-menu-close-order>Order the project</a>
+      <a class="header-order-btn" href="#footer" role="link" data-menu-close-order>Order the project</a>
   </div>
 </div>
 
