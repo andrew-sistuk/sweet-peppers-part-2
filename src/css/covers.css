@@ -17,7 +17,7 @@
 .marquee {
   width: 100%;
   height: 508px;
-  background-image: url('../img/prjs/Rectangle.webp');
+  background-image: url('../img/prjs/Mobile/mobile-bg-covers.png');
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -33,7 +33,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .marquee {
-    background-image: url('../img/prjs/Rectangle-@2x.webp');
+    background-image: url('../img/prjs/Mobile/mobile-bg-covers@2x.png');
   }
 }
 
@@ -167,6 +167,16 @@
   .relet {
     left: -271px;
   }
+  .marquee {
+    background-image: url('../img/prjs/Tablet/tablet-bg-covers.png');
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .marquee {
+      background-image: url('../img/prjs/Tablet/tablet-bg-covers@2x.png');
+    }
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -220,5 +230,16 @@
 
   .animations:hover {
     transform: translateX(-25%);
+  }
+
+  .marquee {
+    background-image: url('../img/prjs/Desktop/desktop-bg-covers.png');
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .marquee {
+      background-image: url('../img/prjs/Desktop/desktop-bg-covers@2x.png');
+    }
   }
 }

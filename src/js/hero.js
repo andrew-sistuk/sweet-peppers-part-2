@@ -35,10 +35,8 @@ buttonHero.addEventListener('click', () => {
   }
 
   if (indexColor === 1) {
-    console.log('green');
     heroSection.classList.add('hero-sectio-one');
   } else if (indexColor === 2) {
-    console.log('blue');
     heroSection.classList.remove('hero-sectio-one');
     heroSection.classList.add('hero-sectio-two');
   } else {
