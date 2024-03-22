@@ -21,7 +21,7 @@ function renderReviews(reviews, reviewList, ok) {
     const reviewHTML = reviews
       .map(
         ({ _id, author, avatar_url, review }) =>
-          `<li class="reviews-list-item swiper-slide" id="review-${_id}">
+          `<li class="reviews-list-item swiper-slide" id="review-${_id}" aria-label="review">
           <picture>
             <source srcset="${avatar_url}" 
               type="image/jpeg">
