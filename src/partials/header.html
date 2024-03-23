@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" aria-label="navigation section">
   <div class="header-container container">
     <div class="header-logo">
       <a href="./index.html" class="header-logo-link">
@@ -20,30 +20,38 @@
           Menu
         </button>
         <ul
-          class="header-menu-list header-text visually-hidden"
+          class="header-menu-list header-text"
           id="header-menu-list"
+          aria-label="open menu button"
           data-menu
         >
-          <li class="header-menu-item header-text">
+          <li class="header-menu-item header-text" aria-label="section link">
             <a href="#about-me">About me</a>
           </li>
-          <li class="header-menu-item header-text">
+          <li class="header-menu-item header-text" aria-label="section link">
             <a href="#benefits">Benefits</a>
           </li>
-          <li class="header-menu-item header-text">
+          <li class="header-menu-item header-text" aria-label="section link">
             <a href="#projects">Projects</a>
           </li>
           <li class="header-menu-item header-text"><a href="#faq">FAQ</a></li>
         </ul>
       </div>
 
-      <a class="header-order-btn" href="#footer">Order the project</a>
+      <a
+        class="header-order-btn"
+        href="#footer"
+        role="button"
+        aria-label="order the project button"
+        >Order the project</a
+      >
     </div>
 
     <button
       class="header-btn button-reset header-menu-link-btn"
       id="open-menu"
       type="button"
+      aria-label="open menu"
       data-menu-open-modal
     >
       <svg class="header-menu-svg" width="28" height="28">
@@ -52,4 +60,3 @@
     </button>
   </div>
 </header>
-<load src="./modal.html" />

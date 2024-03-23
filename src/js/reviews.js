@@ -21,7 +21,7 @@ function renderReviews(reviews, reviewList, ok) {
     const reviewHTML = reviews
       .map(
         ({ _id, author, avatar_url, review }) =>
-          `<li class="reviews-list-item swiper-slide" id="review-${_id}">
+          `<li class="reviews-list-item swiper-slide" id="review-${_id}" aria-label="review">
           <picture>
             <source srcset="${avatar_url}" 
               type="image/jpeg">
@@ -34,27 +34,19 @@ function renderReviews(reviews, reviewList, ok) {
                 loading="lazy"
               />
           </picture>
-          <h3 class="review-author">${author}</h3>
-          <p class="review-text">${review}</p>
+          <h3 class="review-author" aria-label="reviews author name">${author}</h3>
+          <div class="review-text-container">
+            <p class="review-text" aria-label="review text">${review}</p>
+          </div>
+          
       </li>`
       )
       .join('');
 
     reviewList.insertAdjacentHTML('beforeend', reviewHTML);
-    reviewHeightCorrector();
   } else {
     reviewList.insertAdjacentHTML('beforeend', `<h3>Not found :(</h3>`);
   }
-}
-
-function reviewHeightCorrector() {
-  let elements = document.querySelectorAll('.reviews-list-item');
-
-  let maxHeight = Math.max(...Array.from(elements, el => el.clientHeight));
-
-  elements.forEach(element => {
-    element.style.height = maxHeight + 'px';
-  });
 }
 
 function showMessage(message) {

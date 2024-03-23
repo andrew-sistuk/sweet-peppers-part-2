@@ -8,7 +8,7 @@
 }
 
 .header-menu {
-  font-family: InterTight-Medium, sans-serif;
+  font-family: 'InterTight-Medium', sans-serif;
   font-weight: 500;
   font-weight: 500;
   font-size: 16px;
@@ -17,6 +17,7 @@
   border: transparent;
   outline: transparent;
   background-color: transparent;
+  margin-bottom: 15px;
   color: var(--main-white);
 }
 
@@ -44,8 +45,6 @@
 
 .header-menu {
   text-decoration: underline;
-  color: inherit;
-  cursor: pointer;
 }
 
 .header-menu-link-btn {
@@ -56,10 +55,15 @@
 .header-menu-list {
   position: absolute;
   left: 50%;
+  transform: scaleY(0) translateX(-50%);
+  transform-origin: top;
+  transition: transform var(--main-dur-func-transition);
+  overflow: hidden;
   white-space: nowrap;
   text-align: center;
-  transform: translateX(-50%);
-  margin-top: 15px;
+}
+.header-menu-list.is-open {
+  transform: scaleY(1) translateX(-50%);
 }
 
 .header-list-container {
@@ -84,7 +88,12 @@
   letter-spacing: -0.02em;
   border: transparent;
   background-color: var(--main-red);
+<<<<<<< HEAD
   transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+=======
+  transition: background-color var(--main-dur-func-transition),
+    background-image var(--main-dur-func-transition);
+>>>>>>> 9de18caa3aa34585f0778c6011b974ebc4bc04c5
 }
 
 .header-order-btn:hover {
@@ -101,6 +110,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: row;
+    /* overflow: hidden; */
   }
 
   .header-menu-link-btn {

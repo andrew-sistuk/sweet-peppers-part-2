@@ -1,4 +1,4 @@
-<footer class="work" id="footer">
+<footer class="work" id="footer" aria-label="order section">
   <div class="container">
     <h2 class="work-title">
       <picture class="form-logo">
@@ -13,12 +13,17 @@
           width="44"
           height="44"
         />
-        <img src="./img/logo.webp" alt="MDN" width="44" height="44" />
+        <img
+          src="./img/logo.webp"
+          alt="Lloyd Jefferson photo"
+          width="44"
+          height="44"
+        />
       </picture>
       Let&#8216;s <span class="work-title-orange">work</span> together
     </h2>
 
-    <form class="work-form">
+    <form class="work-form" method="post" aria-label="order portfolio">
       <div class="email-input-wrapper">
         <input
           type="email"
@@ -26,12 +31,21 @@
           class="work-form-input email"
           autocomplete="off"
           placeholder="clients@gmail.com"
+          aria-label="type your email"
           novalidate
           required
           pattern="([A-z0-9_\.\-]{1,})@([A-z0-9_\.\-]{1,})\.([A-z]{2,8})"
         />
-        <span class="succes-text visually-hidden">Succes!</span>
-        <span class="invalid-text visually-hidden"
+        <span
+          class="succes-text visually-hidden"
+          aria-label="Succesfull"
+          role="status"
+          >Succes!</span
+        >
+        <span
+          class="invalid-text visually-hidden"
+          aria-label="Try again"
+          role="status"
           >Invalid email, try again</span
         >
       </div>
@@ -40,29 +54,44 @@
         name="comment"
         class="work-form-input comment"
         placeholder="comments"
+        aria-label="type your comment"
         autocomplete="off"
         required
       />
-      <button class="work-send-btn" type="submit">Send</button>
+      <button class="work-send-btn" type="submit" aria-label="send mail">
+        Send
+      </button>
     </form>
 
     <address class="work-contacts">
-      <a class="contact-link" href="mailto:lloydjefferson@gmail.com"
+      <a
+        class="contact-link"
+        href="mailto:lloydjefferson@gmail.com"
+        aria-label="my email link"
         >lloydjefferson@gmail.com</a
       >
-      <a class="contact-link" href="tel:+3801111111111">+380 11 1111 11 11</a>
+      <a
+        class="contact-link"
+        href="tel:+3801111111111"
+        aria-label="my telephone link"
+        >+380 11 1111 11 11</a
+      >
     </address>
   </div>
 
-  <div class="backdrop visually-hidden">
+  <div class="backdrop visually-hidden" role="alert" aria-label="Thanx for order"> 
     <div class="modal">
-      <button class="modal-close-btn" type="button">
+      <button
+        class="modal-close-btn"
+        type="button"
+        aria-label="close thanx window"
+      >
         <svg class="close-icon" width="22" height="22">
           <use href="./img/sprite.svg#icon-close"></use>
         </svg>
       </button>
-      <h3 class="modal-title"></h3>
-      <p class="modal-text"></p>
+      <h3 class="modal-title" aria-label="Thanx title"></h3>
+      <p class="modal-text" aria-label="Thanx text"></p>
     </div>
   </div>
 </footer>
