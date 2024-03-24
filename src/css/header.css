@@ -88,8 +88,7 @@
   letter-spacing: -0.02em;
   border: transparent;
   background-color: var(--main-red);
-  transition: background-color var(--main-dur-func-transition),
-    background-image var(--main-dur-func-transition);
+  transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-order-btn:hover {

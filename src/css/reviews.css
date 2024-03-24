@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
 }
 
 .reviews {
@@ -61,6 +61,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+  text-overflow: ellipsis;
 }
 
 .reviews-swipe-btns-wrapper {
@@ -154,12 +155,17 @@
   }
 }
 
+/* POPUP SERVER ERROR */
+
 .popup-server-error {
   position: fixed;
   top: 20px;
   right: clamp(20px, 5%, 10%);
+  background-color: var(--main-red);
+  color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 9999;
   opacity: 0;
   color: #fff;
