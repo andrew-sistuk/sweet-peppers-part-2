@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
 }
 
 .reviews {
@@ -36,12 +36,7 @@
 .reviews-list-item {
   border-radius: 20px;
   padding: 32px 24px;
-<<<<<<< HEAD
-  height: 355px;
-  overflow: hidden;
-=======
   border: 1px solid rgba(250, 250, 250, 0.2);
->>>>>>> 9de18caa3aa34585f0778c6011b974ebc4bc04c5
 }
 
 .review-photo {
@@ -160,25 +155,17 @@
   }
 }
 
-<<<<<<< HEAD
 /* POPUP SERVER ERROR */
 
-=======
->>>>>>> 9de18caa3aa34585f0778c6011b974ebc4bc04c5
 .popup-server-error {
   position: fixed;
   top: 20px;
   right: clamp(20px, 5%, 10%);
-<<<<<<< HEAD
   background-color: var(--main-red);
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-=======
-  padding: 10px 20px;
-  border-radius: 5px;
->>>>>>> 9de18caa3aa34585f0778c6011b974ebc4bc04c5
   z-index: 9999;
   opacity: 0;
   color: #fff;
